@@ -7,23 +7,27 @@ const Slider = () => {
   return (
     <div className="relative">
       {/* Text overlay */}
-      <div className="absolute inset-0 z-10 grid h-full w-full place-items-center bg-black/55">
+      <div className="absolute inset-0 z-10 grid h-full w-3/4 m-auto place-items-center">
         <div className="w-3/4 text-center md:w-2/4">
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 text-8xl md:text-9xl lg:text-10xl"
+            className="mb-4 text-8xl drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             GBAC
           </Typography>
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 text-8xl md:text-9xl lg:text-10xl"
+            className="mb-4 text-8xl drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             Sports
           </Typography>
-          <Typography variant="lead" color="white" className="mb-12 opacity-80">
+          <Typography
+            variant="lead"
+            color="white"
+            className="mb-12 drop-shadow-2xl"
+          >
             Greater Bangkok Athletics Conference
           </Typography>
           <div className="flex justify-center gap-2">
@@ -38,7 +42,7 @@ const Slider = () => {
       </div>
 
       {/* Carousel */}
-      <Carousel autoplay={true} autoplayDelay={5000} loop={true} className="rounded-xl">
+      <Carousel autoplay={true} autoplayDelay={5000} loop={true} className="">
         <div className="relative h-screen w-full">
           <img
             src={Slider1}

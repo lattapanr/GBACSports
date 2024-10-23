@@ -16,9 +16,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-400 fixed w-full z-20 top-0 start-0">
+      <nav className="bg-white backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 fixed w-full z-20 top-0 start-0">
         <div className="max-w-screen-laptop flex items-center justify-between mx-auto p-2">
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+          <a
+            href="#"
+            className="flex items-center mr-20 md:mr-0 space-x-3 rtl:space-x-reverse"
+          >
             <img src={gbacLogo} className="w-24 h-15" alt="GBAC Logo" />
           </a>
 
@@ -65,7 +68,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
                 >
                   Member Schools
                 </a>
@@ -73,15 +76,15 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
                 >
                   Contacts
                 </a>
               </li>
-              <li>
+              <li className="hidden lg:flex">
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hidden md:p-0 lg:flex lg:hover:bg-transparent lg:hover:text-blue-700"
+                  className="py-2 px-3 text-black rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-800 md:p-0"
                 >
                   Locations
                 </a>
@@ -89,7 +92,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
                 >
                   Calendar
                 </a>
@@ -97,23 +100,23 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0"
                 >
                   All-Stars
                 </a>
               </li>
-              <li>
+              <li className="hidden lg:flex">
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hidden md:p-0 lg:flex lg:hover:bg-transparent lg:hover:text-blue-700"
+                  className="py-2 px-3 text-black rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-800 md:p-0"
                 >
                   Giants
                 </a>
               </li>
-              <li>
+              <li className="hidden lg:flex">
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 hidden md:p-0 lg:flex lg:hover:bg-transparent lg:hover:text-blue-700"
+                  className="py-2 px-3 text-black rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-800 md:p-0"
                 >
                   Our Sponsors
                 </a>
@@ -123,7 +126,7 @@ const Navbar = () => {
                 <button
                   onClick={toggleDropdown}
                   id="dropdownNavbarLink"
-                  className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto"
+                  className="flex items-center justify-between w-full py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-800 md:p-0 md:w-auto"
                 >
                   More{" "}
                   <svg
@@ -146,43 +149,69 @@ const Navbar = () => {
                   id="dropdownNavbar"
                   className={`z-10 ${
                     dropdownOpen ? "block" : "hidden"
-                  } font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out absolute ${
-                    dropdownOpen ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                  } font-normal bg-white backdrop-filter backdrop-blur-md bg-opacity-40 divide-y divide-gray-100 rounded-lg shadow w-44 transition-all duration-300 ease-in-out absolute ${
+                    dropdownOpen
+                      ? "opacity-100 scale-100"
+                      : "opacity-0 scale-95"
                   } left-0 top-full mt-2`}
                 >
-                  <ul className="py-2 text-sm" aria-labelledby="dropdownLargeButton">
+                  <ul
+                    className="py-2 text-sm"
+                    aria-labelledby="dropdownLargeButton"
+                  >
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-white hover:bg-opacity-20"
+                      >
                         Join GBAC
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-white hover:bg-opacity-20"
+                      >
                         Handbook
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-white hover:bg-opacity-20"
+                      >
                         Basketball Rules
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-white hover:bg-opacity-20"
+                      >
                         Volleyball Rules
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-white hover:bg-opacity-20"
+                      >
                         Medical Partners
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-white hover:bg-opacity-20"
+                      >
                         Core and Expansion Sports
                       </a>
                     </li>
                     <li>
-                      <a href="#" className="block px-4 py-2 hover:bg-gray-100">
+                      <a
+                        href="#"
+                        className="block px-4 py-2 hover:bg-white hover:bg-opacity-20"
+                      >
                         Age Groups
                       </a>
                     </li>
