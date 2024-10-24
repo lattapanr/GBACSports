@@ -1,12 +1,19 @@
+// import Giants from "./components/Giants";
 import Navbar from "./components/Navbar";
 import Slider from "./components/Slider";
+import HighlightsVideo from "./components/HighlightsVideo";
+import Cards from "./components/Card";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Navbar />
       <Slider />
-      <div className="text-5xl bg-gray-900 h-screen">Hello</div>
+      {/* <Giants /> */}
+      <HighlightsVideo />
+      <Cards />
+      <Footer />
     </>
   );
 }

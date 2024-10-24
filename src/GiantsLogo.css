@@ -1,0 +1,24 @@
+#svgwrapper {
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    stroke: white; /* You can modify this later */
+    fill: none;
+    position: relative;
+  }
+  
+  .logo-path {
+    stroke-dasharray: 2600;
+    stroke-dashoffset: 2600;
+    animation: letter-animation 5s linear forwards;
+  }
+  
+  @keyframes letter-animation {
+    0% {
+      stroke-dashoffset: 2600;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 // images
 import gbacLogo from "../assets/images/GBAC-logo.jpg";
 
@@ -44,7 +44,7 @@ const Navbar = () => {
         <li key={index} className={item.className || ""}>
           <a
             href={item.href}
-            className={`block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0 ${className}`}
+            className={`block py-2 px-3 text-black drop-shadow-md font-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0 ${className}`}
           >
             {item.label}
           </a>
@@ -77,13 +77,13 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-black backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 fixed w-full z-20 top-0 start-0">
+      <nav className="bg-white backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 fixed w-full z-20 top-0 start-0">
         <div className="max-w-screen-laptop flex items-center justify-between mx-auto p-2">
           <a
             href="#"
             className="flex items-center mr-20 md:mr-0 space-x-3 rtl:space-x-reverse"
           >
-            <img src={gbacLogo} className="w-24 h-15" alt="GBAC Logo" />
+            <img src={gbacLogo} className="w-28 h-18" alt="GBAC Logo" />
           </a>
 
           {/* Hamburger menu for mobile screens */}
@@ -157,7 +157,7 @@ const Navbar = () => {
               <li className="relative">
                 <button
                   onClick={toggleDropdown}
-                  className="flex justify-between w-full text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:w-auto"
+                  className="flex justify-between w-full text-black drop-shadow-md font-extralight rounded hover:bg-gray-100 md:hover:bg-transparent md:w-auto"
                 >
                   More{" "}
                   <svg

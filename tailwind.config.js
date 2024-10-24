@@ -16,7 +16,9 @@ module.exports = withMT({
         colors: {
           transparent: 'transparent',
           current: 'currentColor',
-          'white': '#ffffff',
+          'green': '#1b3630',
+          'light-yellow': '#e6e0af',
+          'blue': '#111f5a',
 
         },screens: {
           'laptop': '1000px',
