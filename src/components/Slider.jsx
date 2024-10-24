@@ -12,14 +12,14 @@ const Slider = () => {
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 text-8xl drop-shadow-lg md:text-9xl lg:text-10xl"
+            className="mb-4 text-8xl font-black drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             GBAC
           </Typography>
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 text-8xl drop-shadow-lg md:text-9xl lg:text-10xl"
+            className="mb-4 text-8xl text-transparent font-outline-light drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             Sports
           </Typography>

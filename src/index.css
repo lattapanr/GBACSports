@@ -6,3 +6,9 @@
   font-family: "Proximanova";
   src: url("./assets/fonts/proximanova.ttf") format("truetype");
 }
+
+@layer base {
+  .font-outline-light {
+    -webkit-text-stroke: 1.5px white;
+  }
+}
