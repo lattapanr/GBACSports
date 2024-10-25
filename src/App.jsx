@@ -1,21 +1,22 @@
-// import Giants from "./components/Giants";
-import Navbar from "./components/Navbar";
-import Slider from "./components/Slider";
-import HighlightsVideo from "./components/HighlightsVideo";
-import Cards from "./components/Card";
-import Footer from "./components/Footer";
+
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import MainLayout from "./layouts/MainLayout"
+import Giant from "./pages/Giants";
+import NotFoundPage from "./pages/NotFoundPage";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<MainLayout />}>
+      <Route index element={<HomePage />} />
+      <Route path="/giants" element={<Giant />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Route>
+    )
+)
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Slider />
-      {/* <Giants /> */}
-      <HighlightsVideo />
-      <Cards />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />
 }
 
 export default App;

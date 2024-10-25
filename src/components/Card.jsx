@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
     Card,
     CardHeader,
@@ -50,7 +52,9 @@ const CustomCard = () => {
             </Typography>
             </CardBody>
             <CardFooter className="pt-0">
+              <Link to='/giants'>
                 <Button>Read More</Button>
+                </Link>
             </CardFooter>
           </Card>
           
