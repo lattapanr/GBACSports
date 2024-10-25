@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 // images
 import gbacLogo from "../assets/images/GBAC-logo.jpg";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation(); // Get the current location
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -16,13 +18,13 @@ const Navbar = () => {
 
   // List of navigation items
   const navItems = [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
     { label: "Member Schools", href: "#" },
     { label: "Contacts", href: "#" },
     { label: "Locations", href: "#", className: "hidden lg:flex" },
     { label: "Calendar", href: "#" },
     { label: "All-Stars", href: "#" },
-    { label: "Giants", href: "#", className: "hidden lg:flex" },
+    { label: "Giants", href: "/giants", className: "hidden lg:flex" },
     { label: "Our Sponsors", href: "#", className: "hidden lg:flex" },
   ];
 
@@ -37,17 +39,19 @@ const Navbar = () => {
     { label: "Age Groups", href: "#" },
   ];
 
-  // Function to render nav items
+  // Function to render nav items with active page indicator
   const renderNavItems = (className = "") => (
     <>
       {navItems.map((item, index) => (
         <li key={index} className={item.className || ""}>
-          <a
-            href={item.href}
-            className={`block py-2 px-3 text-black drop-shadow-md font-light rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0 ${className}`}
+          <Link
+            to={item.href}
+            className={`block py-2 px-3 text-black drop-shadow-md font-light hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0 ${className} ${
+              location.pathname === item.href ? "border-b-2 border-black" : ""
+            }`}
           >
             {item.label}
-          </a>
+          </Link>
         </li>
       ))}
     </>
@@ -63,12 +67,12 @@ const Navbar = () => {
       <ul className="py-2 text-sm">
         {moreItems.map((item, index) => (
           <li key={index}>
-            <a
-              href={item.href}
+            <Link
+              to={item.href}
               className="block px-4 py-2 text-gray-900 hover:bg-gray-200"
             >
               {item.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -79,12 +83,12 @@ const Navbar = () => {
     <div>
       <nav className="bg-white backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 fixed w-full z-20 top-0 start-0">
         <div className="max-w-screen-laptop flex items-center justify-between mx-auto p-2">
-          <a
-            href="#"
+          <Link
+            to="/"
             className="flex items-center mr-20 md:mr-0 space-x-3 rtl:space-x-reverse"
           >
             <img src={gbacLogo} className="w-28 h-18" alt="GBAC Logo" />
-          </a>
+          </Link>
 
           {/* Hamburger menu for mobile screens */}
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse relative">

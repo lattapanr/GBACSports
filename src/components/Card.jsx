@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import {
   Card,
   CardHeader,
@@ -7,32 +9,23 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-// Images
+//Images
 import AllStars from "../assets/images/all_schools.png";
 import AgeGroup from "../assets/images/age-group.jpg";
 
 const CustomCard = () => {
   return (
-    <div className="bg-white w-full pt-10 pb-10 md:pt-20">
-      <div className="bg-white flex flex-col md:flex-row items-center justify-center mx-auto gap-10 p-4 md:max-w-screen-laptop">
-        {/* Card 1 */}
-        <Card className="w-3/4 md:w-96">
-          <CardHeader color="blue-gray" className="relative h-40 sm:h-56">
-            <img
-              src={AllStars}
-              alt="card-image"
-              className="h-full w-full object-cover"
-            />
+    <div className="w-full">
+      <div className="flex flex-col h-screen items-center justify-center mx-auto md:flex-row md:max-w-screen-laptop gap-10">
+        <Card className="mt-6 w-96">
+          <CardHeader color="blue-gray" className="relative h-56">
+            <img src={AllStars} alt="card-image" className="h-full" />
           </CardHeader>
           <CardBody>
-            <Typography
-              variant="h5"
-              color="blue-gray"
-              className="mb-2 text-md md:text-2xl"
-            >
+            <Typography variant="h5" color="blue-gray" className="mb-2">
               Conferences and All-Star Game
             </Typography>
-            <Typography className="hidden md:block">
+            <Typography>
               GBAC All-Star showcases top players, with participants receiving
               certificates and letters for university applications.
             </Typography>
@@ -42,51 +35,40 @@ const CustomCard = () => {
           </CardFooter>
         </Card>
 
-        {/* Card 2 */}
-        <Card className="w-3/4 md:w-96">
+        <Card className="mt-6 w-96">
           <CardHeader
             color="blue-gray"
-            className="flex justify-center items-center relative h-40 sm:h-56 bg-green"
+            className=" flex justify-center items-center relative h-56 bg-green"
           >
-            <h4 className="text-5xl md:text-7xl text-light-yellow">Giants</h4>
+            <h4 className="text-7xl text-light-yellow">Giants</h4>
           </CardHeader>
           <CardBody>
-            <Typography
-              variant="h5"
-              color="blue-gray"
-              className="mb-2 text-md md:text-2xl"
-            >
+            <Typography variant="h5" color="blue-gray" className="mb-2">
               Introducing the GBAC Giants
             </Typography>
-            <Typography className="hidden md:block">
+            <Typography>
               GBAC forms U19 Giants teams, with independent selection and open
               trials for training, friendlies, and matches.
             </Typography>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button>Read More</Button>
+            <Link to="/giants">
+              <Button>Read More</Button>
+            </Link>
           </CardFooter>
         </Card>
 
-        {/* Card 3 */}
-        <Card className="w-3/4 md:w-96">
-          <CardHeader color="blue-gray" className="relative h-40 sm:h-56">
-            <img
-              src={AgeGroup}
-              alt="card-image"
-              className="h-full w-full object-cover"
-            />
+        <Card className="mt-6 w-96">
+          <CardHeader color="blue-gray" className="relative h-56">
+            <img src={AgeGroup} alt="card-image" className="h-full" />
           </CardHeader>
           <CardBody>
-            <Typography
-              variant="h5"
-              color="blue-gray"
-              className="mb-2 text-md md:text-2xl"
-            >
+            <Typography variant="h5" color="blue-gray" className="mb-2">
               Age Groups Explained
-              <br className="hidden md:block" />
+              <br />
+              <br />
             </Typography>
-            <Typography className="hidden md:block">
+            <Typography>
               Students are divided by age divisions, determined by August 1st -
               July 31st. GBAC age calculator is available.
             </Typography>
