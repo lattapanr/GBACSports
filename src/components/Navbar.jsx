@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-// images
 import gbacLogo from "../assets/images/GBAC-logo.jpg";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
@@ -16,7 +15,6 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  // List of navigation items
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Member Schools", href: "#" },
@@ -28,7 +26,6 @@ const Navbar = () => {
     { label: "Our Sponsors", href: "#", className: "hidden lg:flex" },
   ];
 
-  // Dropdown items
   const moreItems = [
     { label: "Join GBAC", href: "#" },
     { label: "Handbook", href: "#" },
@@ -39,7 +36,6 @@ const Navbar = () => {
     { label: "Age Groups", href: "#" },
   ];
 
-  // Function to render nav items with active page indicator
   const renderNavItems = (className = "") => (
     <>
       {navItems.map((item, index) => (
@@ -57,7 +53,6 @@ const Navbar = () => {
     </>
   );
 
-  // Function to render the dropdown menu
   const renderDropdownMenu = () => (
     <div
       className={`${
@@ -81,8 +76,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-white backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 fixed w-full z-20 top-0 start-0">
-        <div className="max-w-screen-laptop flex items-center justify-between mx-auto p-2">
+      <nav
+        className="bg-white backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 
+      fixed w-screen z-20 top-0 start-0"
+      >
+        {/* Constrain the content to 1000px on larger screens, full width on smaller screens */}
+        <div className="w-full md:max-w-[1000px] mx-auto flex items-center justify-between p-2">
           <Link
             to="/"
             className="flex items-center mr-20 md:mr-0 space-x-3 rtl:space-x-reverse"
@@ -125,31 +124,6 @@ const Navbar = () => {
             >
               <ul className="flex flex-col p-4 font-light divide-y divide-gray-100">
                 {renderNavItems("text-gray-900")}
-                {/* More Dropdown for Mobile */}
-                <li className="relative">
-                  <button
-                    onClick={toggleDropdown}
-                    className="flex justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100"
-                  >
-                    More{" "}
-                    <svg
-                      className="w-2.5 h-2.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 10 6"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m1 1 4 4 4-4"
-                      />
-                    </svg>
-                  </button>
-                  {renderDropdownMenu()}
-                </li>
               </ul>
             </div>
           </div>

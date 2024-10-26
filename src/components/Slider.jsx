@@ -8,18 +8,18 @@ const Slider = () => {
     <div className="relative">
       {/* Text overlay */}
       <div className="absolute inset-0 z-10 grid h-full w-3/4 m-auto place-items-center">
-        <div className="w-3/4 text-center md:w-2/4">
+        <div className="w-10/12 text-center md:w-2/4">
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 text-8xl font-black drop-shadow-lg md:text-9xl lg:text-10xl"
+            className="mb-4 text-[5rem] font-extrabold drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             GBAC
           </Typography>
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 text-8xl text-transparent font-outline-light drop-shadow-lg md:text-9xl lg:text-10xl"
+            className="mb-4 font-[Roboto] text-7xl text-transparent font-outline-light drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             Sports
           </Typography>
@@ -31,10 +31,19 @@ const Slider = () => {
             Greater Bangkok Athletics Conference
           </Typography>
           <div className="flex justify-center gap-2">
-            <Button size="lg" color="white">
+            <Button
+              size="lg"
+              color="white"
+              className="font-thin px-4 py-2 md:px-6 md-py-4"
+            >
               Join GBAC
             </Button>
-            <Button size="lg" color="white" variant="text">
+            <Button
+              size="lg"
+              color="white"
+              variant="text"
+              className="font-thin px-4 py-2 md:px-6 md:py-4 bg-gray"
+            >
               Gallery
             </Button>
           </div>

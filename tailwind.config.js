@@ -7,9 +7,11 @@ module.exports = withMT({
   theme: {
     extend: {
       fontFamily: {
-        proxima: ["Proximanova", "sans-serif"],
+        sans: ["Montserrat", "sans-serif"],
+        darklarch: ["DarkLarch", "serif"],
       },
       colors: {
+        black: "#1a1a1a",
         transparent: "transparent",
         current: "currentColor",
         green: "#1b3630",

@@ -16,10 +16,10 @@ import AgeGroup from "../assets/images/age-group.jpg";
 const CustomCard = () => {
   return (
     <div className="w-full">
-      <div className="flex flex-col h-screen items-center justify-center mx-auto md:flex-row md:max-w-screen-laptop gap-10">
-        <Card className="mt-6 w-96">
+      <div className="flex flex-col h-full lg:h-screen items-center justify-center py-12 mx-auto md:flex-row md:max-w-screen-laptop gap-10">
+        <Card className="mt-6">
           <CardHeader color="blue-gray" className="relative h-56">
-            <img src={AllStars} alt="card-image" className="h-full" />
+            <img src={AllStars} alt="card-image" className="h-full w-full" />
           </CardHeader>
           <CardBody>
             <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -31,16 +31,18 @@ const CustomCard = () => {
             </Typography>
           </CardBody>
           <CardFooter className="pt-0">
-            <Button>Read More</Button>
+            <Button className="font-light">Read More</Button>
           </CardFooter>
         </Card>
 
-        <Card className="mt-6 w-96">
+        <Card className="mt-6">
           <CardHeader
             color="blue-gray"
             className=" flex justify-center items-center relative h-56 bg-green"
           >
-            <h4 className="text-7xl text-light-yellow">Giants</h4>
+            <h4 className="font-[DarkLarch] text-8xl text-light-yellow">
+              Giants
+            </h4>
           </CardHeader>
           <CardBody>
             <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -53,14 +55,14 @@ const CustomCard = () => {
           </CardBody>
           <CardFooter className="pt-0">
             <Link to="/giants">
-              <Button>Read More</Button>
+              <Button className="font-light">Read More</Button>
             </Link>
           </CardFooter>
         </Card>
 
-        <Card className="mt-6 w-96">
+        <Card className="mt-6">
           <CardHeader color="blue-gray" className="relative h-56">
-            <img src={AgeGroup} alt="card-image" className="h-full" />
+            <img src={AgeGroup} alt="card-image" className="h-full w-full" />
           </CardHeader>
           <CardBody>
             <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -73,8 +75,8 @@ const CustomCard = () => {
               July 31st. GBAC age calculator is available.
             </Typography>
           </CardBody>
-          <CardFooter className="pt-0">
-            <Button>Read More</Button>
+          <CardFooter className="pt-0 font-light">
+            <Button className="font-light">Read More</Button>
           </CardFooter>
         </Card>
       </div>

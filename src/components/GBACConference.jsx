@@ -1,9 +1,9 @@
 const GBACConference = () => {
   return (
-    <div className="bg-green w-full min-h-screen pt-10">
+    <div className="bg-green w-full h-full lg:min-h-screen py-10">
       <div className="bg-green max-w-3xl mx-auto p-4">
         {/* GBAC Conferences Table */}
-        <h2 className="text-lg text-white md:text-3xl font-semibold mb-4 border-b-2 w-fit">
+        <h2 className="text-2xl text-white md:text-3xl font-semibold mb-4 border-b-2 w-fit">
           GBAC Conferences
         </h2>
         <div className="overflow-x-auto">
@@ -72,7 +72,7 @@ const GBACConference = () => {
         </div>
 
         {/* Playoff Host Conference Rotation Table */}
-        <h2 className="text-lg text-white md:text-3xl font-semibold mt-8 mb-4 border-b-2 w-fit">
+        <h2 className="text-xl text-white md:text-3xl font-semibold mt-8 mb-4 border-b-2 w-fit">
           Playoff Host Conference Rotation
         </h2>
         <div className="overflow-x-auto">

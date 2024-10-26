@@ -1,21 +1,23 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-
-//Components
+// Components
 import GiantsLogo from "../components/GiantsLogo";
-
-//Images
+// Images
 import GiantFront from "../assets/images/Giants_front.png";
 import GiantBack from "../assets/images/Giants_back.png";
 
 const Giant = () => {
   return (
-    <div className="relative max-w-screen-laptop w-full h-screen mx-auto grid grid-cols-1 md:grid-cols-2">
+    <div className="pt-3 md:pt-0 relative w-full max-w-screen-laptop h-screen mx-auto flex flex-col md:grid md:grid-cols-2">
       {/* Left Column (Sticky Sidebar) */}
-      <div className="bg-green p-4 pl-12 h-auto md:h-screen flex flex-col justify-center shadow-md sticky top-0 w-full">
-        <p className="text-light-yellow font-semibold">Introducing . . .</p>
-        <h2 className="text-light-yellow text-8xl font-extrabold">GBAC</h2>
-        {/* <h3 className='text-light-yellow text-9xl'>Giants</h3> */}
-        <GiantsLogo />
+      <div className="bg-green p-4 h-auto md:h-screen flex flex-col justify-center content-center shadow-md sticky top-0 w-full">
+        <div className="w-5/6">
+          <p className="text-light-yellow font-semibold">Introducing . . .</p>
+          <h2 className="text-light-yellow text-7xl md:text-8xl font-[800]">
+            GBAC
+          </h2>
+          {/* <h3 className='text-light-yellow text-9xl'>Giants</h3> */}
+          <GiantsLogo />
+        </div>
       </div>
 
       {/* Right Column (Scrollable Content with hidden scrollbar) */}

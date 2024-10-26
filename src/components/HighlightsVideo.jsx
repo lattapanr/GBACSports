@@ -2,13 +2,15 @@ import Video2024 from "../assets/video/all-stars-2024.mp4";
 
 const HighlightsVideo = () => {
   return (
-    <div className="flex flex-col h-auto lg:h-screen items-center justify-center mx-auto md:flex-row md:max-w-screen-laptop p-4">
-      <div className="w-full md:w-1/3 pb-5 md:pb-0 text-center md:text-left">
-        <h3 className="text-4xl md:text-6xl font-semibold">Highlights</h3>
-        <p className="text-xl md:text-2xl">of</p>
-        <h3 className="text-5xl md:text-6xl font-extrabold">2024</h3>
+    <div className="flex flex-col h-auto items-center justify-center mx-auto px-4 py-8 max-w-11/12 md:max-w-[1200px] lg:h-full">
+      <div className="w-full tracking-wide md:mt-10 md:self-start">
+        <h3 className="text-black text-[10vw] md:text-[10.75vw] lg:text-[8.41rem] font-semibold md:font-black uppercase">
+          All-Stars{" "}
+          <span className="text-black text-sm md:text-2xl uppercase">of</span>{" "}
+          2024
+        </h3>
       </div>
-      <div className="w-full md:w-2/3">
+      <div className="w-full">
         <video
           className="w-full h-auto max-w-full max-h-full"
           controls
