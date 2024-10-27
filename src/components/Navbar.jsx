@@ -19,11 +19,11 @@ const Navbar = () => {
     { label: "Home", href: "/" },
     { label: "Member Schools", href: "#" },
     { label: "Contacts", href: "#" },
-    { label: "Locations", href: "#", className: "hidden lg:flex" },
+    { label: "Locations", href: "#" },
     { label: "Calendar", href: "#" },
     { label: "All-Stars", href: "#" },
-    { label: "Giants", href: "/giants", className: "hidden lg:flex" },
-    { label: "Our Sponsors", href: "#", className: "hidden lg:flex" },
+    { label: "Giants", href: "/giants" },
+    { label: "Our Sponsors", href: "#" },
   ];
 
   const moreItems = [
@@ -42,7 +42,7 @@ const Navbar = () => {
         <li key={index} className={item.className || ""}>
           <Link
             to={item.href}
-            className={`block py-2 px-3 text-black drop-shadow-md font-light hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0 ${className} ${
+            className={`block py-2 px-3 text-black drop-shadow-md font-light hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-800 md:p-0 lg:text-base md:text-xs md:pr-1 ${className} ${
               location.pathname === item.href ? "border-b-2 border-black" : ""
             }`}
           >
@@ -129,13 +129,13 @@ const Navbar = () => {
           </div>
 
           {/* Full menu for medium and larger screens */}
-          <div className="hidden md:flex ml-20 items-end justify-between w-full">
+          <div className="hidden md:flex ml-5 lg:ml-20 items-end justify-between w-full">
             <ul className="flex flex-col md:flex-row p-4 md:p-0 mt-4 font-light drop-shadow-xl border border-gray-100 rounded-lg rtl:space-x-reverse md:mt-0 md:border-0 justify-between w-full">
               {renderNavItems()}
               <li className="relative">
                 <button
                   onClick={toggleDropdown}
-                  className="flex justify-between w-full text-black drop-shadow-md font-extralight rounded hover:bg-gray-100 md:hover:bg-transparent md:w-auto"
+                  className="flex justify-between w-full text-black drop-shadow-md font-extralight rounded hover:bg-gray-100 md:hover:bg-transparent md:w-auto lg:text-base md:text-xs"
                 >
                   More{" "}
                   <svg

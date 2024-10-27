@@ -9,8 +9,8 @@ const Giant = () => {
   return (
     <div className="pt-3 md:pt-0 relative w-full max-w-screen-laptop h-screen mx-auto flex flex-col md:grid md:grid-cols-2">
       {/* Left Column (Sticky Sidebar) */}
-      <div className="bg-green p-4 h-auto md:h-screen flex flex-col justify-center content-center shadow-md sticky top-0 w-full">
-        <div className="w-5/6">
+      <div className="bg-green p-4 h-screen flex flex-col justify-center content-center shadow-md sticky top-0 w-full">
+        <div className="w-5/6 md:mb-20">
           <p className="text-light-yellow font-semibold">Introducing . . .</p>
           <h2 className="text-light-yellow text-7xl md:text-8xl font-[800]">
             GBAC
