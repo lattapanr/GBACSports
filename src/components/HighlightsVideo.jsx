@@ -4,7 +4,7 @@ const HighlightsVideo = () => {
   return (
     <div className="flex flex-col h-auto items-center justify-center mx-auto px-4 py-8 max-w-11/12 md:max-w-[1200px] lg:h-full">
       <div className="w-full tracking-wide md:mt-10 md:self-start">
-        <h3 className="text-black text-[10vw] md:text-[10.75vw] lg:text-[8.41rem] font-semibold md:font-black uppercase">
+        <h3 className="text-black text-[10vw] md:text-[10.75vw] lg:text-[7.5rem] font-semibold md:font-black uppercase">
           All-Stars{" "}
           <span className="text-black text-sm md:text-2xl uppercase">of</span>{" "}
           2024

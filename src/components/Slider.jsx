@@ -12,14 +12,15 @@ const Slider = () => {
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 text-[5rem] font-extrabold drop-shadow-lg md:text-9xl lg:text-10xl"
+            className="mb-4 text-[5rem] font-bold drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             GBAC
           </Typography>
           <Typography
             variant="h1"
             color="white"
-            className="mb-4 font-[Roboto] text-7xl text-transparent font-outline-light drop-shadow-lg md:text-9xl lg:text-10xl"
+            className="mb-4 text-7xl text-transparent font-roboto-outline drop-shadow-lg md:text-9xl lg:text-10xl"
+
           >
             Sports
           </Typography>
@@ -34,7 +35,7 @@ const Slider = () => {
             <Button
               size="lg"
               color="white"
-              className="font-thin px-4 py-2 md:px-6 md-py-4"
+              className="font-extralight px-4 py-2 md:px-6 md-py-4"
             >
               Join GBAC
             </Button>
@@ -42,7 +43,7 @@ const Slider = () => {
               size="lg"
               color="white"
               variant="text"
-              className="font-thin px-4 py-2 md:px-6 md:py-4 bg-gray"
+              className="font-extralight px-4 py-2 md:px-6 md:py-4 bg-gray"
             >
               Gallery
             </Button>

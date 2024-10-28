@@ -8,11 +8,13 @@ import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/Mainlayout";
 import Giant from "./pages/Giants";
 import NotFoundPage from "./pages/NotFoundPage";
+import AllStarsPage from "./pages/AllStarsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<HomePage />} />
+      <Route path="/all-stars" element={<AllStarsPage />} />
       <Route path="/giants" element={<Giant />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
@@ -24,5 +26,3 @@ function App() {
 }
 
 export default App;
-
-//63.5 height for navbar
