@@ -81,7 +81,7 @@ const Navbar = () => {
     { label: "Home", href: "/" },
     { label: "Member Schools", href: "#" },
     { label: "Contacts", href: "#" },
-    { label: "Locations", href: "#" },
+    { label: "Locations", href: "/locations" },
     { label: "Calendar", href: "#" },
     { label: "All-Stars", href: "/all-stars" },
     { label: "Giants", href: "/giants" },
@@ -122,7 +122,7 @@ const Navbar = () => {
       <div
         ref={mobileDropdownRef}
         className="absolute left-0 w-full bg-white bg-opacity-90 divide-y divide-gray-100 rounded-lg shadow-lg mt-2 z-30 transition-transform duration-300 ease-out"
-        style={{ minWidth: '200px' }}
+        style={{ minWidth: "200px" }}
       >
         <ul className="py-2 text-sm">
           {moreItems.map((item, index) => (
@@ -147,7 +147,7 @@ const Navbar = () => {
       <div
         ref={dropdownRef}
         className="absolute right-0 w-64 bg-white bg-opacity-90 divide-y divide-gray-100 rounded-lg shadow-lg mt-2 z-30 transition-transform duration-300 ease-out"
-        style={{ minWidth: '200px' }}
+        style={{ minWidth: "200px" }}
       >
         <ul className="py-2 text-sm">
           {moreItems.map((item, index) => (
@@ -169,7 +169,10 @@ const Navbar = () => {
     <div>
       <nav className="bg-white backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 fixed w-screen z-20 top-0 start-0">
         <div className="w-full md:max-w-[1000px] mx-auto flex items-center justify-between p-2">
-          <Link to="/" className="flex items-center mr-20 md:mr-0 space-x-3 rtl:space-x-reverse">
+          <Link
+            to="/"
+            className="flex items-center mr-20 md:mr-0 space-x-3 rtl:space-x-reverse"
+          >
             <img src={gbacLogo} className="w-28 h-18" alt="GBAC Logo" />
           </Link>
 

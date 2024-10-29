@@ -7,7 +7,10 @@ export default defineConfig({
   server: {
     port: 3000,
     watch: {
-      ignored: ['C:/DumpStack.log.tmp'],
+      ignored: ["C:/DumpStack.log.tmp"],
     },
+  },
+  define: {
+    "process.env": process.env,
   },
 });

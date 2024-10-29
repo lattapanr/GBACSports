@@ -14,3 +14,5 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
+//npm i -S @react-google-maps/api
