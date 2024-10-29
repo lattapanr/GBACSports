@@ -10,7 +10,4 @@ export default defineConfig({
       ignored: ["C:/DumpStack.log.tmp"],
     },
   },
-  define: {
-    "process.env": process.env,
-  },
 });

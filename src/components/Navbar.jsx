@@ -82,7 +82,7 @@ const Navbar = () => {
     { label: "Member Schools", href: "#" },
     { label: "Contacts", href: "#" },
     { label: "Locations", href: "/locations" },
-    { label: "Calendar", href: "#" },
+    { label: "Calendar", href: "/calendar" },
     { label: "All-Stars", href: "/all-stars" },
     { label: "Giants", href: "/giants" },
     { label: "Our Sponsors", href: "#" },

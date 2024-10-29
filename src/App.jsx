@@ -10,6 +10,7 @@ import Giant from "./pages/Giants";
 import NotFoundPage from "./pages/NotFoundPage";
 import AllStarsPage from "./pages/AllStarsPage";
 import LocationsPage from "./pages/LocationsPage";
+import CalendarPage from "./pages/CalendarPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="/all-stars" element={<AllStarsPage />} />
       <Route path="/locations" element={<LocationsPage />} />
+      <Route path="/calendar" element={<CalendarPage />} />
       <Route path="/giants" element={<Giant />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>

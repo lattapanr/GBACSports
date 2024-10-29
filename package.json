@@ -14,8 +14,10 @@
     "@react-google-maps/api": "^2.20.3",
     "@react-spring/parallax": "^9.7.5",
     "@react-spring/web": "^9.7.5",
+    "axios": "^1.7.7",
     "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
+    "framer-motion": "^11.11.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
@@ -35,5 +37,10 @@
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
     "vite": "^5.4.10"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
