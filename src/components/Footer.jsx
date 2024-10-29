@@ -5,10 +5,10 @@ const Footer = () => {
 
   return (
     <footer className="md:w-full bg-green pb-5 mx-auto">
-      <hr className="pb-5 border-blue-gray-50" />
+      <hr className="pb-5" />
       <Typography
         color="blue-gray"
-        className="text-white text-center text-xs md:text-base font-normal"
+        className="text-light-yellow text-center text-xs md:text-base font-normal"
       >
         &copy; {currentYear} Greater Bangkok Athletics Conference | All Rights
         Reserved.

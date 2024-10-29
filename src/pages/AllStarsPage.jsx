@@ -48,7 +48,7 @@ const AllStarsPage = () => {
               be found in{" "}
               <Link
                 to="https://drive.google.com/drive/folders/1I_vcZKuagoWHa-bQhlA0-efzixPm7pVj"
-                className="border-b-2 border-light-yellow cursor-pointer"
+                className="border-b-2 border-light-yellow cursor-pointer font-bold"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -101,7 +101,7 @@ const AllStarsPage = () => {
               please fill in this{" "}
               <Link
                 to="https://docs.google.com/forms/d/e/1FAIpQLSerpaM1Z6dsDRSpA_M6tw13m7FZ7qIliH8XAzfZ0dIQ_4QKJw/viewform"
-                className="border-b-2 border-light-yellow cursor-pointer"
+                className="border-b-2 border-light-yellow cursor-pointer font-semibold"
                 target="_blank"
                 rel="noopener noreferrer"
               >

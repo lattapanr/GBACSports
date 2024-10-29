@@ -79,10 +79,10 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "Member Schools", href: "#" },
+    { label: "Member Schools", href: "/members" },
     { label: "Contacts", href: "#" },
     { label: "Locations", href: "/locations" },
-    { label: "Calendar", href: "#" },
+    { label: "Calendar", href: "/calendar" },
     { label: "All-Stars", href: "/all-stars" },
     { label: "Giants", href: "/giants" },
     { label: "Our Sponsors", href: "#" },
@@ -251,7 +251,7 @@ const Navbar = () => {
                 <button
                   ref={moreButtonRef}
                   onClick={toggleDropdown}
-                  className="flex justify-between w-full text-black drop-shadow-md font-extralight rounded hover:bg-gray-100 md:hover:bg-transparent md:w-auto lg:text-base md:text-xs"
+                  className="flex justify-between w-full text-black drop-shadow-md font-light rounded hover:bg-gray-100 md:hover:bg-transparent md:w-auto lg:text-base md:text-xs"
                 >
                   More{" "}
                   <svg

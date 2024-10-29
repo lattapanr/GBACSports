@@ -35,7 +35,7 @@ const Slider = () => {
             <Button
               size="lg"
               color="white"
-              className="font-extralight px-4 py-2 md:px-6 md-py-4"
+              className="font-light px-4 py-2 md:px-6 md-py-4"
             >
               Join GBAC
             </Button>
@@ -43,7 +43,7 @@ const Slider = () => {
               size="lg"
               color="white"
               variant="text"
-              className="font-extralight px-4 py-2 md:px-6 md:py-4 bg-gray"
+              className="font-light px-4 py-2 md:px-6 md:py-4 bg-gray"
             >
               Gallery
             </Button>
