@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import {
   Card,
@@ -16,7 +17,15 @@ import AgeGroup from "../assets/images/age-group.jpg";
 const CustomCard = () => {
   return (
     <div className="w-full">
-      <div className="flex flex-col h-full lg:h-screen items-center justify-center py-12 mx-auto md:flex-row md:max-w-screen-laptop gap-10">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { delay: 0.2, duration: 0.5 },
+        }}
+        viewport={{ once: false, amount: 0.5 }}
+        className="flex flex-col h-full lg:h-screen items-center justify-center py-12 mx-auto md:flex-row md:max-w-screen-laptop gap-10">
         <Card className="mt-6">
           <CardHeader color="blue-gray" className="relative h-56">
             <img src={AllStars} alt="card-image" className="h-full w-full" />
@@ -79,7 +88,7 @@ const CustomCard = () => {
             <Button className="font-light">Read More</Button>
           </CardFooter>
         </Card>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { motion } from "framer-motion";
 import Slider1 from "../assets/images/slider1.png";
 import Slider2 from "../assets/images/slider2.jpg";
 import Slider3 from "../assets/images/slider3.JPG";
@@ -9,13 +10,32 @@ const Slider = () => {
       {/* Text overlay */}
       <div className="absolute inset-0 z-10 grid h-full w-3/4 m-auto place-items-center">
         <div className="w-10/12 text-center md:w-2/4">
-          <Typography
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 0.2, duration: 1 },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
+<Typography
             variant="h1"
             color="white"
             className="mb-4 text-[5rem] font-bold drop-shadow-lg md:text-9xl lg:text-10xl"
           >
             GBAC
           </Typography>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              transition: { delay: 0.6, duration: 1 },
+            }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
           <Typography
             variant="h1"
             color="white"
@@ -23,7 +43,8 @@ const Slider = () => {
 
           >
             Sports
-          </Typography>
+            </Typography>
+            </motion.div>
           <Typography
             variant="lead"
             color="white"

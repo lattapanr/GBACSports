@@ -80,7 +80,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "Member Schools", href: "/members" },
-    { label: "Contacts", href: "#" },
+    { label: "Contacts", href: "/contacts" },
     { label: "Locations", href: "/locations" },
     { label: "Calendar", href: "/calendar" },
     { label: "All-Stars", href: "/all-stars" },

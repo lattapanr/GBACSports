@@ -1,4 +1,5 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AllStarsSlider from "../components/AllStarsSlider";
 
@@ -21,29 +22,64 @@ const AllStarsPage = () => {
         {/* Scrollable Content */}
         <ParallaxLayer offset={0} speed={0.5}>
           <div className="text-light-yellow max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
-            <h2 className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1 } }}
+              viewport={{ once: false, amount: 0.5 }}
+              className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
               Great Bangkok Athletics Conference All-Stars Match.
-            </h2>
-            <p className="mb-6">
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.2, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              className="mb-6">
               The Greater Bangkok Athletics Conference All-Stars Matches are
               exhibition matches hosted at the end of each Under 15 and 18
               football and basketball tournament or during a weekend All-Stars
               Day.
-            </p>
-            <p className="mb-6">
+            </motion.p>
+            <motion.p
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.4, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              className="mb-6">
               The head coach of the team with the best record in each conference
               during the league season is chosen to lead their respective
               conference in the All-Stars Match.
-            </p>
+            </motion.p>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.5}>
           <div className="text-light-yellow max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
-            <h2 className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
+            <motion.h2
+               initial={{ opacity: 0 }}
+               whileInView={{
+                 opacity: 1,
+                 transition: { delay: 0.2, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
               GBAC All-Stars Match Media.
-            </h2>
-            <p className="mb-6">
+            </motion.h2>
+            <motion.p
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.2, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              className="mb-6">
               Videos and photos from the GBAC All-Stars East vs West Matches can
               be found in{" "}
               <Link
@@ -55,48 +91,126 @@ const AllStarsPage = () => {
                 this folder
               </Link>
               .
-            </p>
-            <div className="self-center">
+            </motion.p>
+            <motion.div
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.4, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              className="self-center">
               <AllStarsSlider />
-            </div>
+            </motion.div>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={2} speed={0.5}>
           <div className="text-light-yellow max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
-            <h2 className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
+            <motion.h2
+               initial={{ opacity: 0}}
+               whileInView={{
+                 opacity: 1,
+                 transition: { delay: 0.2, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
               All-Stars Pupil Selection Criteria.
-            </h2>
-            <p className="mb-6">
+            </motion.h2>
+            <motion.p
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.2, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              className="mb-6">
               Schools will nominate pupils who have excelled in the tournament
               sport over the GBAC season, consistently impacting matches.
-            </p>
-            <h3 className="mb-2 font-bold">Nominated pupils will also be:</h3>
+            </motion.p>
+            <motion.h3
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.4, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              className="mb-2 font-bold">Nominated pupils will also be:</motion.h3>
             <ul className="list-disc pl-4">
-              <li>A positive role model and inspiration to others.</li>
-              <li>
+              <motion.li
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.6, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              >A positive role model and inspiration to others.</motion.li>
+              <motion.li
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.6, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              >
                 Someone who reflects the core values of the selecting school's
                 PE department and Co-curricular Activities Programme.
-              </li>
-              <li>
+              </motion.li>
+              <motion.li
+               initial={{ opacity: 0, y: 50 }}
+               whileInView={{
+                 opacity: 1,
+                 y: 0,
+                 transition: { delay: 0.6, duration: 0.5 },
+               }}
+               viewport={{ once: false, amount: 0.5 }}
+              >
                 Someone whose outstanding attitude towards GBAC Sport has
                 positively impacted the wider school community.
-              </li>
+              </motion.li>
             </ul>
           </div>
         </ParallaxLayer>
 
         <ParallaxLayer offset={3} speed={0.5}>
           <div className="text-light-yellow max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
-            <h2 className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
+            <motion.h2
+              initial={{ opacity: 0}}
+              whileInView={{
+                opacity: 1,
+                transition: { delay: 0.2, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              className="text-xl self-center mb-10 font-bold border-b-2 border-light-yellow">
               Pupils Wanting to Buy a GBAC All-Stars Jersey.
-            </h2>
-            <p className="mb-2">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.4, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              className="mb-2">
               Most pupils who have previously participated in an All-Stars Match
               have already purchased the jerseys they wore on the day as a
               memento, and all nominated pupils can do so for ฿1,590.
-            </p>
-            <p className="mb-2">
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.6, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              className="mb-2">
               If you would like to purchase a GBAC All-Stars match jersey,
               please fill in this{" "}
               <Link
@@ -108,7 +222,7 @@ const AllStarsPage = () => {
                 Google Form
               </Link>
               .
-            </p>
+            </motion.p>
           </div>
         </ParallaxLayer>
       </Parallax>

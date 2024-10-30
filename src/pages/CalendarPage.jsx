@@ -3,9 +3,9 @@ import CalendarPageImage from "../assets/images/calendar-photo.jpg"
 
 const CalendarPage = () => {
     return (
-        <div className="bg-light-yellow lg:bg-white text-green w-full max-w-screen-laptop h-full lg:h-full mx-auto">
+        <div className="bg-light-yellow lg:bg-white text-black w-full max-w-screen-laptop h-full lg:h-full mx-auto">
             <div className="w-10/12 lg:w-full mx-auto flex flex-col">
-                <h1 className="lg:text-xl pt-32 lg:pt-12 pb-2 font-bold">Click <Link className="underline">here</Link> for GBAC Season 1 24/25 basketball league fixtures & results</h1>
+                <h1 className="lg:text-lg pt-32 lg:pt-12 pb-2">Click <Link className="underline">here</Link> for GBAC Season 1 24/25 basketball league fixtures & results</h1>
 
                 <h2 className="lg:hidden">🖱️Click <Link to="https://docs.google.com/spreadsheets/d/1DOSe9OL-GDkMhaf2bc231TojjjLHDbTTTBoqcL3wIH0/edit?gid=180743350#gid=180743350" className="underline">here</Link> to open GBAC tournament dates in Google Sheets. </h2>
 
