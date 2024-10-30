@@ -1,12 +1,22 @@
+import { motion } from "framer-motion";
+
 const GBACConference = () => {
   return (
-    <div className="bg-green w-full h-full lg:min-h-screen py-10">
-      <div className="bg-green max-w-3xl mx-auto p-4">
+    <div className="w-full h-full lg:min-h-screen">
+      <div className="max-w-3xl mx-auto p-4 mt-10">
         {/* GBAC Conferences Table */}
-        <h2 className="text-2xl text-white md:text-3xl font-semibold mb-4 border-b-2 w-fit">
+        <motion.h2
+          initial={{ width: "50%" }}
+          whileInView={{
+            width: "100%",
+            transition: { delay: 0.2, duration: 0.2 },
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="text-2xl md:text-3xl font-black mb-4 border-b-4 border-black"
+        >
           GBAC Conferences
-        </h2>
-        <div className="overflow-x-auto">
+        </motion.h2>
+        <div className="overflow-x-auto mb-16">
           <table className="table-auto w-full text-left border-collapse border border-gray-300">
             <thead>
               <tr>
@@ -21,7 +31,7 @@ const GBACConference = () => {
             <tbody>
               <tr>
                 <td className="bg-ans text-ans-purple border border-gray-300 px-4 py-2">
-                  Amnuay Silpa School
+                  Amnuay Silpa School <br /> <br />
                 </td>
                 <td className="bg-bcb text-bcb-yellow border border-gray-300 px-4 py-2">
                   Brighton College Bangkok
@@ -29,7 +39,7 @@ const GBACConference = () => {
               </tr>
               <tr>
                 <td className="bg-ast text-white border border-gray-300 px-4 py-2">
-                  Aster International School
+                  Aster International School <br /> <br />
                 </td>
                 <td className="bg-lfib text-lfib-blue border border-gray-300 px-4 py-2">
                   Lycée Français International de Bangkok
@@ -63,7 +73,7 @@ const GBACConference = () => {
                 <td className="bg-white text-sisb-blue border border-gray-300 px-4 py-2">
                   Singapore International School (Pracha Uthit)
                 </td>
-                <td className="bg-wcib text-black border border-gray-300 px-4 py-2">
+                <td className="bg-wcib text-black border border-black px-4 py-2">
                   Wellington College Bangkok
                 </td>
               </tr>
@@ -72,19 +82,24 @@ const GBACConference = () => {
         </div>
 
         {/* Playoff Host Conference Rotation Table */}
-        <h2 className="text-xl text-white md:text-3xl font-semibold mt-8 mb-4 border-b-2 w-fit">
+        <motion.h2
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{
+            opacity: 1,
+            transition: { delay: 0.2, duration: 1 },
+            x: 0,
+          }}
+          viewport={{ once: false, amount: 0.5 }}
+          className="text-2xl md:text-3xl font-black mb-4 border-b-4 border-black"
+        >
           Playoff Host Conference Rotation
-        </h2>
+        </motion.h2>
         <div className="overflow-x-auto">
-          <table className="table-auto w-full text-left border-collapse border border-gray-300">
+          <table className="table-auto w-full text-left border-collapse border border-black">
             <thead>
               <tr>
-                <th className="text-white border border-gray-300 px-4 py-2">
-                  Host
-                </th>
-                <th className="text-white border border-gray-300 px-4 py-2">
-                  Year
-                </th>
+                <th className="border border-gray-300 px-4 py-2">Host</th>
+                <th className="border border-gray-300 px-4 py-2">Year</th>
               </tr>
             </thead>
             <tbody>

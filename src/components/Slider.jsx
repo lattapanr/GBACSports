@@ -19,13 +19,13 @@ const Slider = () => {
             }}
             viewport={{ once: false, amount: 0.5 }}
           >
-<Typography
-            variant="h1"
-            color="white"
-            className="mb-4 text-[5rem] font-bold drop-shadow-lg md:text-9xl lg:text-10xl"
-          >
-            GBAC
-          </Typography>
+            <Typography
+              variant="h1"
+              color="white"
+              className="mb-4 text-[5rem] font-bold drop-shadow-lg md:text-9xl lg:text-10xl lg:font-extrabold"
+            >
+              GBAC
+            </Typography>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -36,15 +36,14 @@ const Slider = () => {
             }}
             viewport={{ once: false, amount: 0.5 }}
           >
-          <Typography
-            variant="h1"
-            color="white"
-            className="mb-4 text-7xl text-transparent font-roboto-outline drop-shadow-lg md:text-9xl lg:text-10xl"
-
-          >
-            Sports
+            <Typography
+              variant="h1"
+              color="white"
+              className="mb-4 text-7xl text-transparent font-roboto-outline drop-shadow-lg md:text-9xl lg:text-10xl"
+            >
+              Sports
             </Typography>
-            </motion.div>
+          </motion.div>
           <Typography
             variant="lead"
             color="white"

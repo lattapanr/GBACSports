@@ -14,7 +14,7 @@ const center = {
 const GoogleMaps = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: import.meta.env.REACT_APP_GOOGLE_MAPS_API_KEY,
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   });
 
   const [map, setMap] = React.useState(null);
@@ -50,3 +50,4 @@ const GoogleMaps = () => {
 export default GoogleMaps;
 
 //To set up limitation to the website later once the domain is moved to gbacsports.com
+//https://developers.google.com/maps/documentation/javascript/error-messages?utm_source=maps_js&utm_medium=degraded&utm_campaign=keyless#api-key-and-billing-errors
