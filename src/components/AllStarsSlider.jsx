@@ -1,10 +1,10 @@
 import { Carousel } from "@material-tailwind/react";
-import AllStarsPhoto1 from "../assets/images/all-stars1.jpg";
-import AllStarsPhoto2 from "../assets/images/all-stars2.jpg";
-import AllStarsPhoto3 from "../assets/images/all-stars3.jpg";
-import AllStarsPhoto4 from "../assets/images/all-stars4.jpg";
-import AllStarsPhoto5 from "../assets/images/all-stars5.jpg";
-import AllStarsPhoto6 from "../assets/images/all-stars6.jpg";
+import AllStarsPhoto1 from "../assets/images/all-stars/all-stars1.jpg";
+import AllStarsPhoto2 from "../assets/images/all-stars/all-stars2.jpg";
+import AllStarsPhoto3 from "../assets/images/all-stars/all-stars3.jpg";
+import AllStarsPhoto4 from "../assets/images/all-stars/all-stars4.jpg";
+import AllStarsPhoto5 from "../assets/images/all-stars/all-stars5.jpg";
+import AllStarsPhoto6 from "../assets/images/all-stars/all-stars6.jpg";
 
 const AllStarsSlider = () => {
   return (

@@ -1,13 +1,24 @@
+import * as React from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import ProgressIndicator from "../components/ProgressIndicator";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AllStarsSlider from "../components/AllStarsSlider";
+import AllStarsLogo from "../assets/images/all-stars/allStars-logo.png";
 
 const AllStarsPage = () => {
+  const [progress, setProgress] = React.useState(0);
+
+  const handlePageChange = (offset) => {
+    const newProgress = (offset / 3) * 100; // Update based on number of pages
+    setProgress(newProgress);
+  };
+
   return (
     <div className="h-screen mx-auto">
       <Parallax pages={4}>
         {/* Background Layer - stays fixed */}
+        <ProgressIndicator progress={progress} />
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -106,7 +117,7 @@ const AllStarsPage = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { delay: 0.4, duration: 0.5 },
+                transition: { delay: 0.2, duration: 0.5 },
               }}
               viewport={{ once: false, amount: 0.5 }}
               className="self-center"
@@ -245,6 +256,18 @@ const AllStarsPage = () => {
               </Link>
               .
             </motion.p>
+            <motion.img
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 1, duration: 0.5 },
+              }}
+              viewport={{ once: false, amount: 0.5 }}
+              src={AllStarsLogo}
+              alt="Logo of GBAC All-Stars 2025"
+              className="w-3/4 self-center pt-8"
+            />
           </div>
         </ParallaxLayer>
       </Parallax>
