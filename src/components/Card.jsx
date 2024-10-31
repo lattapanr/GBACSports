@@ -17,17 +17,18 @@ import AgeGroup from "../assets/images/age-group.jpg";
 const CustomCard = () => {
   return (
     <div className="w-full">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.5 },
-        }}
-        viewport={{ once: false, amount: 0.5 }}
+      <div
         className="flex flex-col h-full lg:h-screen items-center justify-center py-12 mx-auto md:flex-row md:max-w-screen-laptop gap-10"
       >
-        <Card className="mt-6">
+        <motion.Card
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.2, duration: 1 },
+          }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="mt-6">
           <CardHeader color="blue-gray" className="relative h-56">
             <img src={AllStars} alt="card-image" className="h-full w-full" />
           </CardHeader>
@@ -45,9 +46,16 @@ const CustomCard = () => {
               <Button className="font-light">Read More</Button>
             </Link>
           </CardFooter>
-        </Card>
+        </motion.Card>
 
-        <Card className="mt-6">
+        <motion.Card
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.4,  duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.5 }} className="mt-6">
           <CardHeader
             color="blue-gray"
             className=" flex justify-center items-center relative h-56 bg-green"
@@ -70,9 +78,16 @@ const CustomCard = () => {
               <Button className="font-light">Read More</Button>
             </Link>
           </CardFooter>
-        </Card>
+        </motion.Card>
 
-        <Card className="mt-6">
+        <motion.Card
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { delay: 0.8, duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.5 }}className="mt-6">
           <CardHeader color="blue-gray" className="relative h-56">
             <img src={AgeGroup} alt="card-image" className="h-full w-full" />
           </CardHeader>
@@ -90,8 +105,8 @@ const CustomCard = () => {
           <CardFooter className="pt-0 font-light">
             <Button className="font-light">Read More</Button>
           </CardFooter>
-        </Card>
-      </motion.div>
+        </motion.Card>
+      </div>
     </div>
   );
 };
