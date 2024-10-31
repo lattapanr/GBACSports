@@ -1,24 +1,14 @@
-import * as React from "react";
+
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import ProgressIndicator from "../components/ProgressIndicator";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import AllStarsSlider from "../components/AllStarsSlider";
 import AllStarsLogo from "../assets/images/all-stars/allStars-logo.png";
 
 const AllStarsPage = () => {
-  const [progress, setProgress] = React.useState(0);
-
-  const handlePageChange = (offset) => {
-    const newProgress = (offset / 3) * 100; // Update based on number of pages
-    setProgress(newProgress);
-  };
-
   return (
-    <div className="h-screen mx-auto">
+    <div className="h-screen mx-auto overflow-y-scroll">
       <Parallax pages={4}>
-        {/* Background Layer - stays fixed */}
-        <ProgressIndicator progress={progress} />
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -31,7 +21,7 @@ const AllStarsPage = () => {
 
         {/* Scrollable Content */}
         <ParallaxLayer offset={0} speed={0.5}>
-          <div className="text-black max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
+          <div className="max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <motion.h1
               initial={{ opacity: 0, x: -50 }}
               whileInView={{
@@ -40,7 +30,7 @@ const AllStarsPage = () => {
                 x: 0,
               }}
               viewport={{ once: false, amount: 0.5 }}
-              className="text-xl lg:text-5xl leading-8 self-center mb-10 font-bold border-b-2 border-black"
+              className="text-xl w-full md:text-3xl lg:text-5xl leading-8 self-center mb-10 font-bold border-b-2 border-black"
             >
               Great Bangkok Athletics Conference All-Stars Match.
             </motion.h1>
@@ -77,7 +67,7 @@ const AllStarsPage = () => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={1} speed={0.5}>
-          <div className=" max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
+          <div className="max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <motion.h2
               initial={{ opacity: 0, x: -50 }}
               whileInView={{
@@ -86,7 +76,7 @@ const AllStarsPage = () => {
                 x: 0,
               }}
               viewport={{ once: false, amount: 0.5 }}
-              className="text-xl lg:w-full lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
+              className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
             >
               GBAC All-Stars Match Media.
             </motion.h2>
@@ -128,7 +118,7 @@ const AllStarsPage = () => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={2} speed={0.5}>
-          <div className="max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
+          <div className="max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <motion.h2
               initial={{ opacity: 0, x: -50 }}
               whileInView={{
@@ -137,7 +127,7 @@ const AllStarsPage = () => {
                 x: 0,
               }}
               viewport={{ once: false, amount: 0.5 }}
-              className="text-xl lg:w-full lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
+              className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
             >
               All-Stars Pupil Selection Criteria.
             </motion.h2>
@@ -175,6 +165,7 @@ const AllStarsPage = () => {
                   transition: { delay: 0.6, duration: 0.5 },
                 }}
                 viewport={{ once: false, amount: 0.5 }}
+                className="pb-2"
               >
                 A positive role model and inspiration to others.
               </motion.li>
@@ -186,6 +177,7 @@ const AllStarsPage = () => {
                   transition: { delay: 0.6, duration: 0.5 },
                 }}
                 viewport={{ once: false, amount: 0.5 }}
+                className="pb-2"
               >
                 Someone who reflects the core values of the selecting school's
                 PE department and Co-curricular Activities Programme.
@@ -198,6 +190,7 @@ const AllStarsPage = () => {
                   transition: { delay: 0.6, duration: 0.5 },
                 }}
                 viewport={{ once: false, amount: 0.5 }}
+                className="pb-2"
               >
                 Someone whose outstanding attitude towards GBAC Sport has
                 positively impacted the wider school community.
@@ -207,7 +200,7 @@ const AllStarsPage = () => {
         </ParallaxLayer>
 
         <ParallaxLayer offset={3} speed={0.5}>
-          <div className="max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
+          <div className="max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <motion.h2
               initial={{ opacity: 0, x: -50 }}
               whileInView={{
@@ -216,7 +209,7 @@ const AllStarsPage = () => {
                 x: 0,
               }}
               viewport={{ once: false, amount: 0.5 }}
-              className="text-xl lg:w-full lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
+              className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
             >
               Pupils Wanting to Buy a GBAC All-Stars Jersey.
             </motion.h2>
@@ -266,7 +259,7 @@ const AllStarsPage = () => {
               viewport={{ once: false, amount: 0.5 }}
               src={AllStarsLogo}
               alt="Logo of GBAC All-Stars 2025"
-              className="w-3/4 self-center pt-8"
+              className="md:w-3/4 self-center pt-8"
             />
           </div>
         </ParallaxLayer>

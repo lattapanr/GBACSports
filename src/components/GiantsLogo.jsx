@@ -30,7 +30,7 @@ const GiantTextAnimation = () => {
   return (
     <div id="svgwrapper" className="w-full h-full flex justify-center">
       <div
-        className="w-[300px] max-w-full md:w-[700px] overflow-hidden"
+        className="w-[280px] sm:w-450 max-w-full md:w-[650px] overflow-hidden"
         style={{ transform: "scale(1)", transformOrigin: "top left" }}
       >
         <svg

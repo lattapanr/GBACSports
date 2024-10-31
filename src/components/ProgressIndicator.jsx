@@ -21,9 +21,10 @@ function CircularProgressWithLabel(props) {
         }}
       >
         <Typography
-          variant="caption"
+          variant="p"
           component="div"
           sx={{ color: "text.secondary" }}
+          className="text-x font-semibold"
         >
           {`${Math.round(props.value)}%`}
         </Typography>
@@ -39,7 +40,7 @@ CircularProgressWithLabel.propTypes = {
 export default function ProgressIndicator({ progress }) {
   // Here we apply the fixed positioning styles
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-[300px] bottom-[90px] z-50">
       <CircularProgressWithLabel value={progress} />
     </div>
   );

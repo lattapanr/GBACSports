@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/Mainlayout";
-import Giant from "./pages/Giants";
+import GiantsPage from "./pages/GiantsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AllStarsPage from "./pages/AllStarsPage";
 import LocationsPage from "./pages/LocationsPage";
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       <Route path="/all-stars" element={<AllStarsPage />} />
       <Route path="/locations" element={<LocationsPage />} />
       <Route path="/calendar" element={<CalendarPage />} />
-      <Route path="/giants" element={<Giant />} />
+      <Route path="/giants" element={<GiantsPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   )

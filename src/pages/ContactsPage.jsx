@@ -198,7 +198,7 @@ const ContactsPage = () => {
                   x: 0,
                   transition: { delay: 0.2, duration: 0.5 },
                 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: false, amount: 0.5 }}
                 src={school.image}
                 alt={`School ground of ${school.name}`}
                 className="w-full h-full max-h-[350px] md:max-h-full object-cover"

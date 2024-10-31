@@ -22,7 +22,7 @@ const CustomCard = () => {
         whileInView={{
           opacity: 1,
           y: 0,
-          transition: { delay: 0.2, duration: 0.5 },
+          transition: { duration: 0.5 },
         }}
         viewport={{ once: false, amount: 0.5 }}
         className="flex flex-col h-full lg:h-screen items-center justify-center py-12 mx-auto md:flex-row md:max-w-screen-laptop gap-10"
