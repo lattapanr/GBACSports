@@ -18,7 +18,7 @@ const GiantsDesktop = () => {
             whileInView={{
               opacity: 1,
               x: 0,
-              transition: { delay: 1, duration: 1 },
+              transition: { delay: 0.2, duration: 1 },
             }}
             viewport={{ once: true, amount: 0.5 }}
             className="text-light-yellow text-8xl font-[800]"
@@ -31,20 +31,31 @@ const GiantsDesktop = () => {
       </div>
 
       {/* Right Column (Scrollable Content with hidden scrollbar) */}
-      <div className="w-full h-screen overflow-y-auto" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+      <div
+        className="w-full h-screen overflow-y-auto"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
         <div className="relative w-full h-full overflow-y-auto">
           <Parallax pages={2} className="h-full w-full scrollbar-hide">
             {/* First Image */}
             <ParallaxLayer offset={0} speed={0.5}>
               <div className="h-[85vh] w-full flex items-center justify-center pt-10">
-                <img src={GiantFront} alt="Front View of Giants" className="w-full h-full object-contain" />
+                <img
+                  src={GiantFront}
+                  alt="Front View of Giants"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </ParallaxLayer>
 
             {/* Second Image */}
             <ParallaxLayer offset={1} speed={0.5}>
               <div className="h-[85vh] w-full flex items-center justify-center pt-10">
-                <img src={GiantBack} alt="Back View of Giants" className="w-full h-full object-contain" />
+                <img
+                  src={GiantBack}
+                  alt="Back View of Giants"
+                  className="w-full h-full object-contain"
+                />
               </div>
             </ParallaxLayer>
           </Parallax>
@@ -55,25 +66,39 @@ const GiantsDesktop = () => {
           <div className="text-light-yellow text-[15px] font-light w-11/12 px-4 flex flex-col justify-center">
             <motion.p
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.5 } }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.4, duration: 0.5 },
+              }}
               viewport={{ once: false, amount: 0.5 }}
               className="pb-4"
             >
-              GBAC has extended its provision and participation pyramid by forming both GBAC U19 Boys' and Girls' representative teams.
+              GBAC has extended its provision and participation pyramid by
+              forming both GBAC U19 Boys' and Girls' representative teams.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0, transition: { delay: 0.4, duration: 0.5 } }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.4, duration: 0.5 },
+              }}
               viewport={{ once: true, amount: 0.5 }}
               className="pb-10"
             >
-              This team, named the GBAC Giants, will be selected independently from the All-Star U19 Matches and an additional paid open trial.
+              This team, named the GBAC Giants, will be selected independently
+              from the All-Star U19 Matches and an additional paid open trial.
             </motion.p>
 
             {/* Event Sections */}
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.5 } }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.6, duration: 0.5 },
+              }}
               viewport={{ once: true, amount: 0.5 }}
               className="font-medium"
             >
@@ -81,7 +106,11 @@ const GiantsDesktop = () => {
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0, transition: { delay: 0.6, duration: 0.5 } }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { delay: 0.6, duration: 0.5 },
+              }}
               viewport={{ once: true, amount: 0.5 }}
               className="pb-5"
             >
@@ -110,7 +139,8 @@ const GiantsDesktop = () => {
               viewport={{ once: true, amount: 0.5 }}
               className="pb-5"
             >
-              Selection Event Round 2 - Paid for Trialists not selected in Round 1 vs U15 Selected Team
+              Selection Event Round 2 - Paid for Trialists not selected in Round
+              1 vs U15 Selected Team
             </motion.p>
 
             <motion.h2

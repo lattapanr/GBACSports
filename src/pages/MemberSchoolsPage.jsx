@@ -32,18 +32,19 @@ const MemberSchoolsPage = () => {
 
   return (
     <div className="flex flex-col items-center pt-24 lg:pt-12 py-10 space-y-8 mx-auto max-w-[1000px]">
-
-<motion.div
-  initial={{ width: '80%' }}
-  whileInView={{ width: "100%", transition: { delay: 0.2, duration: 0.8 } }}
-  viewport={{ once: false, amount: 0.5 }}
-  className="border-black border-b-4 border-t-4"
->
+      <motion.div
+        initial={{ width: "80%" }}
+        whileInView={{
+          width: "100%",
+          transition: { delay: 0.2, duration: 0.8 },
+        }}
+        viewport={{ once: false, amount: 0.5 }}
+        className="border-black border-b-4 border-t-4"
+      >
         <h1 className="py-4 text-black text-4xl lg:text-6xl font-bold">
-        GBAC's
-    Member Schools
-  </h1>
-</motion.div>
+          GBAC's Member Schools
+        </h1>
+      </motion.div>
       {images.map((image, index) => (
         <a
           key={index}

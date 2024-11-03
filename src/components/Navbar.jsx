@@ -85,16 +85,29 @@ const Navbar = () => {
     { label: "Calendar", href: "/calendar" },
     { label: "All-Stars", href: "/all-stars" },
     { label: "Giants", href: "/giants" },
-    { label: "Our Sponsors", href: "#" },
+    { label: "Our Sponsors", href: "/sponsors" },
   ];
 
   const moreItems = [
-    { label: "Join GBAC", href: "#" },
-    { label: "Handbook", href: "#" },
-    { label: "Basketball Rules", href: "#" },
-    { label: "Volleyball Rules", href: "#" },
-    { label: "Medical Partners", href: "#" },
-    { label: "Core and Expansion Sports", href: "#" },
+    { label: "Join GBAC", href: "/application" },
+    {
+      label: "Handbook",
+      href: "https://www.gbacsports.com/_files/ugd/8a70a0_93b34518e9504bbb9a738743250dbe9c.pdf",
+    },
+    {
+      label: "Basketball Rules",
+      href: "https://www.gbacsports.com/_files/ugd/8a70a0_82739586dc1e4811a32c7b2440b25224.pdf",
+    },
+    {
+      label: "Football Rules",
+      href: "https://www.gbacsports.com/_files/ugd/8a70a0_52b3eb6a511c4224ae148bd2cf82747c.pdf",
+    },
+    {
+      label: "Volleyball Rules",
+      href: "https://www.gbacsports.com/_files/ugd/8a70a0_ae46a14cc00f45df8aadd2866164b208.pdf",
+    },
+    { label: "Medical Partners", href: "/medical" },
+    { label: "Core and Expansion Sports", href: "/core" },
     { label: "Age Groups", href: "#" },
   ];
 
@@ -129,6 +142,8 @@ const Navbar = () => {
             <li key={index}>
               <Link
                 to={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block px-4 py-2 text-gray-900 hover:bg-gray-200"
               >
                 {item.label}
@@ -154,6 +169,8 @@ const Navbar = () => {
             <li key={index}>
               <Link
                 to={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block px-4 py-2 text-gray-900 hover:bg-gray-200"
               >
                 {item.label}

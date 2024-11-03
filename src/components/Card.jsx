@@ -17,9 +17,7 @@ import AgeGroup from "../assets/images/age-group.jpg";
 const CustomCard = () => {
   return (
     <div className="w-full">
-      <div
-        className="flex flex-col h-full lg:h-screen items-center justify-center py-12 mx-auto md:flex-row md:max-w-screen-laptop gap-10"
-      >
+      <div className="flex flex-col h-full lg:h-screen items-center justify-center py-12 mx-auto md:flex-row md:max-w-screen-laptop gap-10">
         <motion.Card
           initial={{ opacity: 0, y: 50 }}
           whileInView={{
@@ -28,7 +26,8 @@ const CustomCard = () => {
             transition: { delay: 0.2, duration: 1 },
           }}
           viewport={{ once: true, amount: 0.5 }}
-          className="mt-6">
+          className="mt-6"
+        >
           <CardHeader color="blue-gray" className="relative h-56">
             <img src={AllStars} alt="card-image" className="h-full w-full" />
           </CardHeader>
@@ -53,9 +52,11 @@ const CustomCard = () => {
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { delay: 0.4,  duration: 0.5 },
+            transition: { delay: 0.4, duration: 0.5 },
           }}
-          viewport={{ once: true, amount: 0.5 }} className="mt-6">
+          viewport={{ once: true, amount: 0.5 }}
+          className="mt-6"
+        >
           <CardHeader
             color="blue-gray"
             className=" flex justify-center items-center relative h-56 bg-green"
@@ -87,7 +88,9 @@ const CustomCard = () => {
             y: 0,
             transition: { delay: 0.8, duration: 0.5 },
           }}
-          viewport={{ once: true, amount: 0.5 }}className="mt-6">
+          viewport={{ once: true, amount: 0.5 }}
+          className="mt-6"
+        >
           <CardHeader color="blue-gray" className="relative h-56">
             <img src={AgeGroup} alt="card-image" className="h-full w-full" />
           </CardHeader>

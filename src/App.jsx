@@ -13,6 +13,10 @@ import LocationsPage from "./pages/LocationsPage";
 import CalendarPage from "./pages/CalendarPage";
 import MemberSchoolsPage from "./pages/MemberSchoolsPage";
 import ContactsPage from "./pages/ContactsPage";
+import SponsorsPage from "./pages/SponsorsPage";
+import MembershipInfoPage from "./pages/additionalPages/MembershipInfoPage";
+import MedicalContactsPage from "./pages/additionalPages/MedicalContactsPage";
+import CoreExpansionDevelopmentalPage from "./pages/additionalPages/CoreExpansionDevelopmentalPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,6 +28,10 @@ const router = createBrowserRouter(
       <Route path="/locations" element={<LocationsPage />} />
       <Route path="/calendar" element={<CalendarPage />} />
       <Route path="/giants" element={<GiantsPage />} />
+      <Route path="/sponsors" element={<SponsorsPage />} />
+      <Route path="/application" element={<MembershipInfoPage />} />
+      <Route path="/core" element={<CoreExpansionDevelopmentalPage />} />
+      <Route path="/medical" element={<MedicalContactsPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   )

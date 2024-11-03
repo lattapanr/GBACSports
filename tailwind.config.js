@@ -9,7 +9,7 @@ module.exports = withMT({
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
         darklarch: ["DarkLarch", "serif"],
-        roboto: ["Roboto", "sans-serif"]
+        roboto: ["Roboto", "sans-serif"],
       },
       colors: {
         black: "#1a1a1a",
@@ -37,6 +37,9 @@ module.exports = withMT({
       },
       screens: {
         laptop: "1000px",
+      },
+      spacing: {
+        500: "500px",
       },
     },
   },
