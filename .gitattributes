@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 *.mov filter=lfs diff=lfs merge=lfs -text
+all-stars-bw.mp4 filter=lfs diff=lfs merge=lfs -text
