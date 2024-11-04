@@ -1,11 +1,11 @@
-import Slider from "../components/Slider";
+import HomePageImageCarousel from "../components/HomePageImageCarousel";
 import HighlightsVideo from "../components/HighlightsVideo";
 import Cards from "../components/Card";
 import GBACConference from "../components/GBACConference";
 const HomePage = () => {
   return (
     <div className="mt-[60px] md:mt-[65px] lg:mt-0">
-      <Slider />
+      <HomePageImageCarousel />
       <HighlightsVideo />
       <GBACConference />
       <Cards />

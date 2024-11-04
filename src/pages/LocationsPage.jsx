@@ -13,7 +13,7 @@ const LocationsPage = () => {
         viewport={{ once: true, amount: 0.5 }}
         className="border-black border-b-2 border-t-2 lg:border-b-4 lg:border-t-4 mt-16 mx-auto"
       >
-        <h1 className="py-2 md:py-4 text-black text-xl sm:2xl lg:text-4xl font-semibold md:font-bold">
+        <h1 className="py-2 md:py-4 text-black text-xl sm:2xl lg:text-5xl font-extrabold md:font-bold">
           GBAC's Member Schools' Locations
         </h1>
       </motion.div>

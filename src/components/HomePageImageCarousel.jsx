@@ -5,7 +5,7 @@ import Slider2 from "../assets/images/slider2.jpg";
 import Slider3 from "../assets/images/slider3.JPG";
 import { Link } from "react-router-dom";
 
-const Slider = () => {
+const HomePageImageCarousel = () => {
   return (
     <div className="relative">
       {/* Text overlay */}
@@ -92,7 +92,7 @@ const Slider = () => {
               <Button
                 size="lg"
                 color="white"
-                className="text-xs font-light px-4 py-2 md:py-4 md:px-6 md-py-4"
+                className="text-xs md:text-sm  font-light px-4 py-2 md:py-4 md:px-6 md-py-4"
               >
                 Join GBAC
               </Button>
@@ -102,7 +102,7 @@ const Slider = () => {
                 size="lg"
                 color="white"
                 variant="text"
-                className="text-xs font-light px-4 py-2 md:px-6 md:py-4 bg-gray"
+                className="text-xs md:text-sm font-light px-4 py-2 md:px-6 md:py-4 bg-gray"
               >
                 All-Stars
               </Button>
@@ -139,4 +139,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default HomePageImageCarousel;

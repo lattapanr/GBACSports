@@ -27,7 +27,7 @@ const MembershipInfoPage = () => {
               x: 0,
             }}
             viewport={{ once: true, amount: 0.5 }}
-            className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black pb-2"
+            className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-extrabold border-b-2 lg:border-b-4 border-black pb-2"
           >
             Membership Application Process
           </motion.h1>
