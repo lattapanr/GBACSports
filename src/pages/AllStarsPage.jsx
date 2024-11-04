@@ -54,7 +54,7 @@ const AllStarsPage = () => {
                   x: 0,
                 }}
                 viewport={{ once: false, amount: 0.5 }}
-                className="text-xl w-full md:text-3xl lg:text-5xl leading-8 self-center mb-10 font-bold border-b-2 border-black"
+                className="text-xl w-full md:text-3xl lg:text-5xl leading-8 self-center mb-10 font-bold border-b-2 border-black pb-2"
               >
                 Great Bangkok Athletics Conference All-Stars Match
               </motion.h1>
@@ -102,7 +102,7 @@ const AllStarsPage = () => {
                   x: 0,
                 }}
                 viewport={{ once: false, amount: 0.5 }}
-                className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
+                className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black pb-2"
               >
                 GBAC All-Stars Match Media
               </motion.h2>
@@ -155,7 +155,7 @@ const AllStarsPage = () => {
                   x: 0,
                 }}
                 viewport={{ once: false, amount: 0.5 }}
-                className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
+                className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black pb-2"
               >
                 All-Stars Pupil Selection Criteria
               </motion.h2>
@@ -239,7 +239,7 @@ const AllStarsPage = () => {
                   x: 0,
                 }}
                 viewport={{ once: false, amount: 0.5 }}
-                className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black"
+                className="text-xl w-full md:text-3xl lg:text-5xl self-center mb-10 font-bold border-b-2 border-black pb-2"
               >
                 Pupils Wanting to Buy a GBAC All-Stars Jersey
               </motion.h2>

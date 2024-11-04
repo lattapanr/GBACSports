@@ -9,9 +9,11 @@ const HighlightsVideo = () => {
   initial={{ opacity: 0, scale: 0.1 }}
   whileInView={{ opacity: 1, scale: 1 }}
   viewport={{ once: false, amount: 0.5 }}
-  transition={{ delay: 0.2, duration: 1 }}
-  className="text-black text-[10vw] md:text-[10.75vw] lg:text-[7.5rem] font-semibold md:font-black uppercase"
->
+          transition={{ delay: 0.2, duration: 1 }}
+          
+  className="text-center text-black text-[9vw] md:text-[9.5vw] lg:text-[6.5rem] xl:text-[7.5rem] font-black uppercase"
+
+        >
   All-Stars{" "}
   <span className="text-black text-sm md:text-2xl uppercase">of</span>{" "}
   2024

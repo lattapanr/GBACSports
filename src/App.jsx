@@ -17,6 +17,7 @@ import SponsorsPage from "./pages/SponsorsPage";
 import MembershipInfoPage from "./pages/additionalPages/MembershipInfoPage";
 import MedicalContactsPage from "./pages/additionalPages/MedicalContactsPage";
 import CoreExpansionDevelopmentalPage from "./pages/additionalPages/CoreExpansionDevelopmentalPage";
+import AgeGroupsPage from "./pages/additionalPages/AgeGroupsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path="/application" element={<MembershipInfoPage />} />
       <Route path="/core" element={<CoreExpansionDevelopmentalPage />} />
       <Route path="/medical" element={<MedicalContactsPage />} />
+      <Route path="/age-groups" element={<AgeGroupsPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   )

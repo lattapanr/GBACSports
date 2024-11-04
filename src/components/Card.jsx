@@ -26,7 +26,7 @@ const CustomCard = () => {
             transition: { delay: 0.2, duration: 1 },
           }}
           viewport={{ once: true, amount: 0.5 }}
-          className="mt-6"
+          className="mt-16 md:mt-0 max-w-[350px] rounded-lg border"
         >
           <CardHeader color="blue-gray" className="relative h-56">
             <img src={AllStars} alt="card-image" className="h-full w-full" />
@@ -55,7 +55,7 @@ const CustomCard = () => {
             transition: { delay: 0.4, duration: 0.5 },
           }}
           viewport={{ once: true, amount: 0.5 }}
-          className="mt-6"
+          className="mt-16 md:mt-0 max-w-[350px] rounded-lg border"
         >
           <CardHeader
             color="blue-gray"
@@ -89,7 +89,7 @@ const CustomCard = () => {
             transition: { delay: 0.8, duration: 0.5 },
           }}
           viewport={{ once: true, amount: 0.5 }}
-          className="mt-6"
+          className="mt-16 md:mt-0 max-w-[350px] rounded-lg border"
         >
           <CardHeader color="blue-gray" className="relative h-56">
             <img src={AgeGroup} alt="card-image" className="h-full w-full" />

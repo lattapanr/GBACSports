@@ -108,7 +108,7 @@ const Navbar = () => {
     },
     { label: "Medical Partners", href: "/medical" },
     { label: "Core and Expansion Sports", href: "/core" },
-    { label: "Age Groups", href: "#" },
+    { label: "Age Groups", href: "/age-groups" },
   ];
 
   const renderNavItems = (className = "") => (
@@ -185,7 +185,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="bg-white backdrop-filter backdrop-blur-md bg-opacity-10 border-b border-gray-400 fixed w-screen z-20 top-0 start-0">
-        <div className="w-full md:max-w-[1000px] mx-auto flex items-center justify-between p-2">
+        <div className="w-full md:max-w-screen-[laptop] mx-auto flex items-center justify-between p-2">
           <Link
             to="/"
             className="flex items-center mr-20 md:mr-0 space-x-3 rtl:space-x-reverse"

@@ -10,12 +10,12 @@ const Slider = () => {
     <div className="relative">
       {/* Text overlay */}
       <div className="absolute inset-0 z-10 grid h-full w-3/4 m-auto place-items-center">
-        <div className="w-10/12 text-center md:w-2/4">
+        <div className="text-center">
           <div>
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-[5rem] font-bold drop-shadow-lg md:text-9xl lg:text-[12rem] lg:font-extrabold"
+              className="mb-4 text-[5rem] font-extrabold drop-shadow-lg md:text-9xl lg:text-[12rem]"
             >
               <motion.span
                 initial={{ opacity: 0, x: 50 }}
@@ -75,7 +75,7 @@ const Slider = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-7xl text-transparent font-roboto-outline drop-shadow-lg md:text-9xl lg:text-[12rem]"
+              className="mb-4 text-7xl text-transparent font-extrabold font-roboto-outline drop-shadow-lg md:text-9xl lg:text-[12rem]"
             >
               Sports
             </Typography>
@@ -92,7 +92,7 @@ const Slider = () => {
               <Button
                 size="lg"
                 color="white"
-                className="font-light px-4 py-4 md:px-6 md-py-4"
+                className="text-xs font-light px-4 py-2 md:py-4 md:px-6 md-py-4"
               >
                 Join GBAC
               </Button>
@@ -102,7 +102,7 @@ const Slider = () => {
                 size="lg"
                 color="white"
                 variant="text"
-                className="font-light px-4 py-2 md:px-6 md:py-4 bg-gray"
+                className="text-xs font-light px-4 py-2 md:px-6 md:py-4 bg-gray"
               >
                 All-Stars
               </Button>
