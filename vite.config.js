@@ -15,7 +15,9 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendors': ['react', 'react-dom'],
-          // Other chunks if needed
+          'all-stars': ['../src/pages/AllStars.jsx'],
+          'highlights-video': ['../src/components/HighlightsVideo.jsx'],
+          'membership-page': ['../../src/pages/additionalPages/MembershipInfoPage.jsx']
         },
       },
     },
