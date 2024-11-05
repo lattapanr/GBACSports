@@ -10,4 +10,14 @@ export default defineConfig({
       ignored: ["C:/DumpStack.log.tmp"],
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendors': ['react', 'react-dom'],
+          // Other chunks if needed
+        },
+      },
+    },
+  },
 });
