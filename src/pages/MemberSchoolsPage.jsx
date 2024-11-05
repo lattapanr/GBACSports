@@ -10,7 +10,7 @@ import LFIB from "../assets/images/schools-banners/lfib.png";
 import PPIP from "../assets/images/schools-banners/ppip.png";
 import S107 from "../assets/images/schools-banners/s107.png";
 import SISB from "../assets/images/schools-banners/sisb.png";
-import SPIP from "../assets/images/schools-banners/spip.png";
+import SPIP from "../assets/images/schools-banners/SPIP.png";
 import TSI from "../assets/images/schools-banners/tsi.png";
 import VIS from "../assets/images/schools-banners/vis.png";
 import WCIB from "../assets/images/schools-banners/wcib.png";
