@@ -31,7 +31,7 @@ const CustomCard = () => {
         >
           <Card>
             <CardHeader color="blue-gray" className="relative h-56">
-              <img src={AllStars} alt="card-image" className="h-full w-full" />
+              <img src={AllStars} alt="GBAC member schools logos" className="h-full w-full" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
@@ -100,7 +100,7 @@ const CustomCard = () => {
         >
           <Card>
             <CardHeader color="blue-gray" className="relative h-56">
-              <img src={AgeGroup} alt="card-image" className="h-full w-full" />
+              <img src={AgeGroup} alt="a group of GBAC students cicle around a GBAC coach" className="h-full w-full" />
             </CardHeader>
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">

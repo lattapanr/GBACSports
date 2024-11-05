@@ -28,53 +28,22 @@ const Navbar = () => {
     if (mobileDropdownOpen) {
       setMobileDropdownOpen(false);
     }
+
+    // Toggle body scroll based on mobile menu state
+    document.body.style.overflow = mobileMenuOpen ? "auto" : "hidden";
   };
 
-  // Close dropdown or mobile menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        dropdownOpen &&
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target) &&
-        !moreButtonRef.current.contains(event.target)
-      ) {
-        setDropdownOpen(false);
-      }
-
-      if (
-        mobileDropdownOpen &&
-        mobileDropdownRef.current &&
-        !mobileDropdownRef.current.contains(event.target) &&
-        !mobileMoreButtonRef.current.contains(event.target)
-      ) {
-        setMobileDropdownOpen(false);
-      }
-
-      if (
-        mobileMenuOpen &&
-        mobileMenuRef.current &&
-        !mobileMenuRef.current.contains(event.target) &&
-        !mobileButtonRef.current.contains(event.target)
-      ) {
-        setMobileMenuOpen(false);
-      }
-    };
-
-    if (dropdownOpen || mobileDropdownOpen || mobileMenuOpen) {
-      document.addEventListener("click", handleClickOutside);
-    } else {
-      document.removeEventListener("click", handleClickOutside);
-    }
-
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      // Reset body scroll on component unmount or when mobile menu closes
+      document.body.style.overflow = "auto";
     };
-  }, [dropdownOpen, mobileDropdownOpen, mobileMenuOpen]);
+  }, []);
 
   const closeMobileMenus = () => {
     setMobileMenuOpen(false);
     setMobileDropdownOpen(false);
+    document.body.style.overflow = "auto"; // Restore scroll
   };
 
   const navItems = [
@@ -90,22 +59,10 @@ const Navbar = () => {
 
   const moreItems = [
     { label: "Join GBAC", href: "/application" },
-    {
-      label: "Handbook",
-      href: "https://www.gbacsports.com/_files/ugd/8a70a0_93b34518e9504bbb9a738743250dbe9c.pdf",
-    },
-    {
-      label: "Basketball Rules",
-      href: "https://www.gbacsports.com/_files/ugd/8a70a0_82739586dc1e4811a32c7b2440b25224.pdf",
-    },
-    {
-      label: "Football Rules",
-      href: "https://www.gbacsports.com/_files/ugd/8a70a0_52b3eb6a511c4224ae148bd2cf82747c.pdf",
-    },
-    {
-      label: "Volleyball Rules",
-      href: "https://www.gbacsports.com/_files/ugd/8a70a0_ae46a14cc00f45df8aadd2866164b208.pdf",
-    },
+    { label: "Handbook", href: "https://www.gbacsports.com/handbook.pdf" },
+    { label: "Basketball Rules", href: "https://www.gbacsports.com/basketball.pdf" },
+    { label: "Football Rules", href: "https://www.gbacsports.com/football.pdf" },
+    { label: "Volleyball Rules", href: "https://www.gbacsports.com/volleyball.pdf" },
     { label: "Medical Partners", href: "/medical" },
     { label: "Core and Expansion Sports", href: "/core" },
     { label: "Age Groups", href: "/age-groups" },
@@ -135,7 +92,7 @@ const Navbar = () => {
     return (
       <div
         ref={mobileDropdownRef}
-        className="absolute left-0 w-full bg-white divide-y divide-gray-100 rounded-lg shadow-lg mt-2 z-30 transition-transform duration-300 ease-out"
+        className="absolute left-0 w-full bg-white divide-y divide-gray-100 rounded-lg shadow-lg mt-2 z-30 transition-transform duration-300 ease-out overflow-y-scroll"
         style={{ minWidth: "200px" }}
       >
         <ul className="py-2 text-sm">
@@ -164,7 +121,7 @@ const Navbar = () => {
       <div
         ref={dropdownRef}
         onMouseLeave={() => setDropdownOpen(false)}
-        className="absolute right-0 w-64 bg-white bg-opacity-90 divide-y divide-gray-100 rounded-lg shadow-lg z-30 transition-transform duration-300 ease-out"
+        className="absolute right-0 w-64 bg-white divide-y divide-gray-100 rounded-lg shadow-lg z-30 transition-transform duration-300 ease-out"
         style={{ minWidth: "200px", marginTop: "20px" }}
       >
         <ul className="py-2 text-sm">
@@ -202,7 +159,7 @@ const Navbar = () => {
               ref={mobileButtonRef}
               onClick={toggleMobileMenu}
               type="button"
-              className="inline-flex items-center p-2 w-12 h-10 justify-center text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              className="inline-flex items-center p-2 w-11 h-9 justify-center text-sm text-gray-500 md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="navbar-sticky"
               aria-expanded={mobileMenuOpen ? "true" : "false"}
             >
@@ -218,9 +175,17 @@ const Navbar = () => {
               ref={mobileMenuRef}
               className={`${
                 mobileMenuOpen ? "block" : "hidden"
-              } fixed  left-[-10px] top-0 w-screen h-screen bg-white shadow-lg z-10 rounded-lg transition-transform duration-300 ease-out`}
+              } fixed left-[-12px] top-0 w-screen h-screen bg-white shadow-lg z-10 rounded-lg overflow-y-scroll transition-transform duration-300 ease-out`}
             >
-              <ul className="flex flex-col px-4 my-10 font-light divide-y divide-gray-100">
+              {/* Close button in top-right */}
+              <button
+                onClick={toggleMobileMenu}
+                className="absolute top-4 right-2 p-2"
+              >
+                <img src={CloseMenu} alt="close menu" className="w-7 h-7" />
+              </button>
+
+              <ul className="flex flex-col px-4 mt-20 font-light divide-y divide-gray-100">
                 {renderNavItems("text-gray-900")}
                 <li className="relative">
                   <button

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 import { motion } from "framer-motion";
 import StarSportsLogo from "../assets/images/starSportsLogo.png";
 import InstagramIcon from "../assets/images/icons/instagram.png";
@@ -15,14 +17,34 @@ const SponsorsPage = () => {
         })`,
       }}
     >
+
+<Helmet>
+  <title>Our Sponsors | GBAC Sports</title>
+  <meta 
+    name="description" 
+    content="GBAC is proudly sponsored by StarSportsBKK, a leading sports academy in Bangkok founded by experienced coach Ivan Rock. StarSportsBKK provides quality coaching, sports camps, and training to promote youth athletic excellence across Bangkok." 
+  />
+</Helmet>
+
+
       <div className="w-[90%] md:w-fit h-fit max-w-screen-laptop p-4 lg:p-10 justify-center items-center mx-auto flex flex-col lg:flex-row gap-10 bg-white backdrop-filter bg-opacity-70 mt-10 lg:mt-0">
         <div className="w-[50%] md:w-[30%] lg:w-[50%]">
           <img
             src={StarSportsLogo}
-            alt="logo of StarSports - a coaching companty in Bangkok Thailand"
+            alt="StarSportsBKK logo - GBAC sponsor for youth sports in Bangkok"
           />
         </div>
         <div>
+        
+          <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{
+          opacity: 1,
+          transition: { delay: 0.2, duration: 1 },
+          y: 0,
+        }}
+        viewport={{ once: true, amount: 0.5 }}
+            className="text-lg font-semibold mb-4">About Our Sponsor: StarSportsBKK</motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{
@@ -119,14 +141,14 @@ const SponsorsPage = () => {
             <a href="https://www.instagram.com/starsportsbkk/">
               <img
                 src={InstagramIcon}
-                alt="Instagram icon wrapped with the link to Star Sports BKK page"
+                alt="Visit StarSportsBKK on Instagram"
                 className="w-[30px]"
               />
             </a>
             <a href="https://www.facebook.com/profile.php?id=100095152523301&paipv=0&eav=AfYHtA5HrM2m7QHB7zlpnWLXF-to8DuFACwTsETF0bTikcgN_Gx_onAln8w6SvWpGCc">
               <img
                 src={FacebookIcon}
-                alt="Facebook icon wrapped with the link to Star Sports BKK page"
+                alt="Visit StarSportsBKK on Facebook"
                 className="w-[30px]"
               />
             </a>

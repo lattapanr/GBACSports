@@ -24,6 +24,7 @@ const HighlightsVideo = () => {
           autoPlay
           muted
           loop
+          title="GBAC All-Stars 2024 Highlights"
         >
           <source src={Video2024} type="video/mp4" />
           Your browser does not support the video tag.

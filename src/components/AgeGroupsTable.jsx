@@ -1,10 +1,10 @@
 const AgeGroupsTable = () => {
     return (
       <section className="flex flex-col items-center">
-        <h2 className="text-xl font-semibold mb-4 text-gray-800">
+        <h2 className="text-xl lg:text-3xl font-semibold lg:font-black mb-4 text-gray-800">
           GBAC Age Groups 2024-2025
         </h2>
-        <table className="w-full border border-gray-300">
+        <table className="w-full border font-light border-gray-300">
           <thead>
             <tr>
               <th className="px-2 sm:px-4 py-2 border border-gray-300 bg-gray-100 md:w-auto">

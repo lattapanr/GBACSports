@@ -4,8 +4,10 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+
 import HomePage from "./pages/HomePage";
-import MainLayout from "./layouts/Mainlayout";
+import MainLayout from "./layouts/MainLayout";
 import GiantsPage from "./pages/GiantsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import AllStarsPage from "./pages/AllStarsPage";
@@ -40,9 +42,11 @@ const router = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  );
 }
 
 export default App;
-
-//31/10/24 at home - npm install @mui/material @emotion/react @emotion/styled

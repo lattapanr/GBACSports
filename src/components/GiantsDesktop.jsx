@@ -8,7 +8,7 @@ import GiantBack from "../assets/images/Giants_back.png";
 
 const GiantsDesktop = () => {
   return (
-    <div className="pt-0 relative w-full h-screen mx-auto lg:grid lg:grid-cols-2">
+    <div className="pt-0 relative max-w-[1200px] h-screen mx-auto lg:grid lg:grid-cols-2">
       {/* Left Column (Sticky Sidebar) */}
       <div className="bg-green p-4 h-screen flex flex-col justify-center shadow-md sticky top-0 w-full">
         <div className="w-full mb-20 pl-10">

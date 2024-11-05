@@ -1,9 +1,16 @@
+import { Helmet } from "react-helmet-async";
 import { Typography, Button } from "@material-tailwind/react";
 import Page404 from "../assets/images/not-found.png";
 
 const NotFoundPage = () => {
   return (
     <div className="h-screen mx-auto grid place-items-center text-center px-8">
+      
+      <Helmet>
+  <title>Page Not Found | GBAC Sports</title>
+  <meta name="description" content="The page you are looking for does not exist on the Greater Bangkok Athletics Conference (GBAC) website. Return to the homepage to explore events, teams, and resources for youth athletics in Bangkok." />
+</Helmet>
+
       <img src={Page404} alt="flag with 404 numbers" className="max-w-64" />
       <Typography
         variant="h1"

@@ -1,9 +1,16 @@
+import { Helmet } from "react-helmet-async";
+
 import { motion } from "framer-motion";
 import BackgroundImage from "../../assets/images/coreBg.jpg";
 
 const CoreExpansionDevelopmentalPage = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen">
+      <Helmet>
+  <title>Core and Expansion Sports | GBAC Sports</title>
+  <meta name="description" content="Discover the core and expansion sports offered by the Greater Bangkok Athletics Conference (GBAC). Learn about the sports that make up the foundation of GBAC's inter-school competitions and the additional sports that enhance athletic opportunities for student-athletes." />
+</Helmet>
+      
       {/* Background Image */}
       <img
         src={BackgroundImage}

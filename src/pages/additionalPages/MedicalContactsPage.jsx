@@ -1,5 +1,6 @@
+import { Helmet } from "react-helmet-async";
+
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 import ANSLogo from "../../assets/images/schools-logos/ANSLogo.png";
 import ASTLogo from "../../assets/images/schools-logos/ASTLogo.png";
@@ -177,6 +178,12 @@ const MedicalContactsPage = () => {
   ];
   return (
     <div className="flex flex-col w-[90%] items-center pt-24 lg:pt-12 py-10 space-y-8 mx-auto max-w-[1000px]">
+      <Helmet>
+  <title>Medical Partnerships | GBAC Sports</title>
+  <meta name="description" content="Find information on medical partnerships for each school in the Greater Bangkok Athletics Conference (GBAC)." />
+</Helmet>
+
+      
       <motion.div
         initial={{ width: "80%" }}
         whileInView={{

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import BackgroundVideo from "../../assets/video/GBAC2023.mp4"; // Import your video file
@@ -5,6 +7,10 @@ import BackgroundVideo from "../../assets/video/GBAC2023.mp4"; // Import your vi
 const MembershipInfoPage = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      <Helmet>
+  <title>Join GBAC | GBAC Sports</title>
+  <meta name="description" content="Learn how your school can join the Greater Bangkok Athletics Conference (GBAC) to promote youth athletics and inter-school sports. Discover the benefits of membership, including participation in competitive sports events across Bangkok." />
+</Helmet>
       {/* Background Video */}
       <video
         autoPlay
@@ -17,8 +23,8 @@ const MembershipInfoPage = () => {
       </video>
 
       {/* Content Overlay */}
-      <div className="relative z-10 max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-screen-laptop mx-auto h-full flex flex-col items-center justify-center mt-[80px] md:mt-0">
-        <div className="text-sm md:text-md lg:text-base font-light bg-white backdrop-filter bg-opacity-90 p-10 max-h-[70vh] md:max-h-full overflow-y-auto">
+      <div className="pt-[55px] lg:pt-[30px] relative z-10 max-w-[90%] lg:max-w-screen-laptop mx-auto  lg:max-h-full flex flex-col items-center justify-center mt-[80px] md:mt-0">
+        <div className=" text-sm md:text-md lg:text-base font-light bg-white backdrop-filter bg-opacity-90 p-10 max-h-[70vh] md:max-h-full overflow-y-auto">
           <motion.h1
             initial={{ opacity: 0, x: -50 }}
             whileInView={{

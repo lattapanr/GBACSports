@@ -21,10 +21,10 @@ const GBACConference = () => {
           <table className="table-auto w-full text-left border-collapse border border-gray-300">
             <thead>
               <tr>
-                <th className="bg-black text-white border border-gray-300 px-4 py-2">
+                <th scope="col" className="bg-black text-white border border-gray-300 px-4 py-2">
                   GBAC West
                 </th>
-                <th className="bg-white text-black border border-gray-300 px-4 py-2">
+                <th scope="col" className="bg-white text-black border border-gray-300 px-4 py-2">
                   GBAC East
                 </th>
               </tr>
@@ -99,8 +99,8 @@ const GBACConference = () => {
           <table className="table-auto w-full text-left border-collapse border border-black">
             <thead>
               <tr>
-                <th className="border border-gray-300 px-4 py-2">Host</th>
-                <th className="border border-gray-300 px-4 py-2">Year</th>
+                <th scope="col" className="border border-gray-300 px-4 py-2">Host</th>
+                <th scope="col" className="border border-gray-300 px-4 py-2">Year</th>
               </tr>
             </thead>
             <tbody className="text-xs md:text-sm lg:text-base">

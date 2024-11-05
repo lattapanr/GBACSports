@@ -1,9 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 import GoogleMaps from "../components/GoogleMaps";
 import { motion } from "framer-motion";
 
 const LocationsPage = () => {
   return (
     <div className="max-w-screen-laptop mx-auto mt-[120px] sm:mt-30 lg:mt-0">
+      
+      <Helmet>
+  <title>Locations | GBAC Sports</title>
+  <meta name="description" content="Explore the locations of member schools in the Greater Bangkok Athletics Conference (GBAC). These school venues across Bangkok host inter-school competitions, fostering youth sports and athletic development." />
+</Helmet>
+      
       <motion.div
         initial={{ width: "70%" }}
         whileInView={{
@@ -13,7 +21,7 @@ const LocationsPage = () => {
         viewport={{ once: true, amount: 0.5 }}
         className="border-black border-b-2 border-t-2 lg:border-b-4 lg:border-t-4 mt-16 mx-auto"
       >
-        <h1 className="py-2 md:py-4 text-black text-xl sm:2xl lg:text-5xl font-extrabold md:font-bold">
+        <h1 className="py-2 md:py-4 text-black text-xl sm:3xl lg:text-5xl font-extrabold md:font-bold">
           GBAC's Member Schools' Locations
         </h1>
       </motion.div>

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 import { motion } from "framer-motion";
 import ANSGround from "../assets/images/schools-grounds/ans-ground.jpg";
 import ASTGround from "../assets/images/schools-grounds/ast_ground.jpg";
@@ -187,12 +189,29 @@ Bang Plee, Samut Prakan 10540`,
 const ContactsPage = () => {
   return (
     <div className="mx-auto max-w-screen-laptop pt-[83px] md:pt-[73px] lg:pt-0">
+      <Helmet>
+        <title>School Contacts | GBAC Sports</title>
+        <meta name="description" content="Find contact information for each member school in the Greater Bangkok Athletics Conference (GBAC). Connect with schools across Bangkok participating in GBAC's inter-school sports events and fostering youth athletic excellence." />
+      </Helmet>
+
+      <motion.div
+        initial={{ width: "80%" }}
+        whileInView={{
+          width: "100%",
+          transition: { delay: 0.2, duration: 0.8 },
+        }}
+        viewport={{ once: false, amount: 0.5 }}
+        className="mx-auto max-w-[90%] lg:max-w-full border-black border-b-2 border-t-2 lg:border-b-4 lg:border-t-4 my-10"
+      >
+        <h1 className="py-4 text-xl  sm:3xl  lg:text-5xl font-extrabold">
+        GBAC Member Schools & Contacts
+        </h1>
+      </motion.div>
+      
       {schoolData.map((school, index) => (
         <div
           key={index}
-          className={`w-full md:max-h-[400px] flex flex-col ${
-            index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
-          }`}
+          className={`w-full md:max-h-[400px] flex flex-col ${index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"} mb-10`}
         >
           <div className="w-full md:w-1/2">
             <motion.img
@@ -210,26 +229,37 @@ const ContactsPage = () => {
           </div>
           <div className="w-full md:w-1/2 text-sm lg:text-base p-4 md:content-center">
             <h2 className="text-xl font-semibold pb-2">{school.name}</h2>
-            <p className="font-semibold pb-2">{school.contact}</p>
-            <p className="pb-2">{school.address}</p>
-            <p>Telephone No: {school.phone}</p>
+            <h3 className="font-semibold pb-2">Contact:</h3>
+            <p>{school.contact}</p>
+            <h3 className="font-semibold pt-2">Address:</h3>
+            <p>{school.address}</p>
+            <h3 className="font-semibold pt-2">Phone:</h3>
+            <p>{school.phone}</p>
             {school.website && (
               <p>
-                School website:{" "}
                 <a
                   href={school.website}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline"
+                  aria-label={`Visit website of ${school.name}`}
                 >
-                  {new URL(school.website).hostname}
+                  School website
                 </a>
               </p>
             )}
             {school.map && (
-              <a href={school.map} className="underline">
-                School Location
-              </a>
+              <p>
+                <a
+                  href={school.map}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline"
+                  aria-label={`View ${school.name} on Google Maps`}
+                >
+                  School Location
+                </a>
+              </p>
             )}
           </div>
         </div>

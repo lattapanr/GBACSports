@@ -116,21 +116,21 @@ const HomePageImageCarousel = () => {
         <div className="relative h-screen w-full">
           <img
             src={Slider1}
-            alt="image 1"
+            alt="GBAC sports event showcasing athletes" 
             className="h-screen w-full object-cover"
           />
         </div>
         <div className="relative h-screen w-full">
           <img
             src={Slider2}
-            alt="image 2"
+            alt="GBAC sports event showcasing athletes" 
             className="h-screen w-full object-cover"
           />
         </div>
         <div className="relative h-screen w-full">
           <img
             src={Slider3}
-            alt="image 3"
+            alt="GBAC sports event showcasing athletes" 
             className="h-screen w-full object-cover"
           />
         </div>

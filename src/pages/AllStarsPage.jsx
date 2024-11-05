@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -8,6 +9,18 @@ import backgroundVideo from "../assets/video/all-stars-2024-bw.mp4";
 const AllStarsPage = () => {
   return (
     <div className="h-screen mx-auto overflow-y-scroll relative">
+      <Helmet>
+        <title>All-Stars | GBAC Sports</title>
+        <meta 
+          name="description" 
+          content="The Greater Bangkok Athletics Conference (GBAC) All-Star Matches showcase top talent from each member school. Held at the end of Under 15 and 18 football and basketball tournaments, these exhibition games feature the best players, with head coaches from leading teams guiding the All-Star squads." 
+        />
+        <meta 
+          name="keywords" 
+          content="GBAC, Greater Bangkok Athletics Conference, All-Stars, youth sports, Bangkok athletics, inter-school tournaments" 
+        />
+      </Helmet>
+
       {/* Background Video */}
       <div className="absolute inset-0 overflow-hidden -z-10">
         <video
@@ -25,24 +38,16 @@ const AllStarsPage = () => {
             objectFit: "cover",
             zIndex: -10,
           }}
-          src={backgroundVideo} // Use the imported video
+          src={backgroundVideo} 
+          aria-label="Background video for the GBAC All-Stars page"
         >
           Your browser does not support the video tag.
         </video>
       </div>
 
       <Parallax pages={4} className="relative z-10">
-        <ParallaxLayer
-          offset={0}
-          speed={0.5}
-          factor={4}
-          style={{
-            maxWidth: "1000px",
-            margin: "auto",
-          }}
-        />
-
-        {/* Scrollable Content */}
+        
+        {/* Content Section 1 */}
         <ParallaxLayer offset={0} speed={0.5}>
           <div className="max-w-[90%] md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <div className="bg-white backdrop-filter bg-opacity-90 p-4 sm:p-10 md:p-16">
@@ -56,7 +61,7 @@ const AllStarsPage = () => {
                 viewport={{ once: false, amount: 0.5 }}
                 className="text-xl w-full md:text-3xl lg:text-5xl leading-8 self-center mb-10 font-bold border-b-2 border-black pb-2"
               >
-                Great Bangkok Athletics Conference All-Stars Match
+                Greater Bangkok Athletics Conference All-Stars Match
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 50 }}
@@ -91,8 +96,9 @@ const AllStarsPage = () => {
           </div>
         </ParallaxLayer>
 
+        {/* Content Section 2 */}
         <ParallaxLayer offset={1} speed={0.5}>
-          <div className="max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
+          <div className="max-w-[280px] max-w-[90%] md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <div className="bg-white backdrop-filter bg-opacity-90 p-4 sm:p-10 md:p-16">
               <motion.h2
                 initial={{ opacity: 0, x: -50 }}
@@ -123,6 +129,7 @@ const AllStarsPage = () => {
                   className="border-b-2 border-black cursor-pointer font-bold"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link to GBAC All-Stars media folder"
                 >
                   this folder
                 </Link>
@@ -144,8 +151,9 @@ const AllStarsPage = () => {
           </div>
         </ParallaxLayer>
 
+        {/* Content Section 3 */}
         <ParallaxLayer offset={2} speed={0.5}>
-          <div className="max-w-[280px] sm:max-w-sm md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
+          <div className="max-w-[280px] max-w-[90%] md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <div className="bg-white backdrop-filter bg-opacity-90 p-4 sm:p-10 md:p-16">
               <motion.h2
                 initial={{ opacity: 0, x: -50 }}
@@ -228,8 +236,9 @@ const AllStarsPage = () => {
           </div>
         </ParallaxLayer>
 
+        {/* Content Section 4 */}
         <ParallaxLayer offset={3} speed={0.5}>
-          <div className="max-w-[280px] sm:max-w-xs md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
+          <div className="max-w-[280px] max-w-[90%] md:max-w-xl lg:max-w-[850px] mx-auto h-screen flex flex-col items-start justify-center text-sm md:text-md lg:text-base font-extralight">
             <div className="bg-white backdrop-filter bg-opacity-90 p-4 sm:p-10 md:p-16 flex flex-col">
               <motion.h2
                 initial={{ opacity: 0, x: -50 }}
@@ -274,6 +283,7 @@ const AllStarsPage = () => {
                   className="border-b-2 border-black cursor-pointer font-semibold"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Link to purchase GBAC All-Stars jersey form"
                 >
                   Google Form
                 </Link>
