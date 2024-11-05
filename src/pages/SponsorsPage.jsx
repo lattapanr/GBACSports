@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import StarSportsLogo from "../assets/images/starSportsLogo.png";
-import InstagramIcon from "../assets/images/instagram.png";
-import FacebookIcon from "../assets/images/facebook.png";
+import InstagramIcon from "../assets/images/icons/instagram.png";
+import FacebookIcon from "../assets/images/icons/facebook.png";
 import BackgroundImage from "../assets/images/starSportsBgCut.jpg";
 import LargeBackgroundImage from "../assets/images/starSportsBg.jpg";
 
