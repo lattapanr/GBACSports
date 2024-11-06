@@ -10,7 +10,7 @@ import LFIB from "../assets/images/schools-banners/lfib.png";
 import PPIP from "../assets/images/schools-banners/ppip.png";
 import S107 from "../assets/images/schools-banners/s107.png";
 import SISB from "../assets/images/schools-banners/sisb.png";
-import SPIP from "../assets/images/schools-banners/SPIP.png";
+import SPIPnew from "../assets/images/schools-banners/SPIP.png";
 import TSI from "../assets/images/schools-banners/tsi.png";
 import VIS from "../assets/images/schools-banners/vis.png";
 import WCIB from "../assets/images/schools-banners/wcib.png";
@@ -43,9 +43,9 @@ const MemberSchoolsPage = () => {
     <div className="flex flex-col items-center pt-24 lg:pt-12 py-10 space-y-8 mx-auto lg:max-w-[1000px]">
       <Helmet>
         <title>Member Schools | GBAC Sports</title>
-        <meta 
-          name="description" 
-          content="Explore the member schools of the Greater Bangkok Athletics Conference (GBAC). Each school participates in inter-school sports events, promoting youth athletics and sportsmanship across Bangkok. Visit each school's website to learn more." 
+        <meta
+          name="description"
+          content="Explore the member schools of the Greater Bangkok Athletics Conference (GBAC). Each school participates in inter-school sports events, promoting youth athletics and sportsmanship across Bangkok. Visit each school's website to learn more."
         />
       </Helmet>
 
@@ -59,10 +59,10 @@ const MemberSchoolsPage = () => {
         className="border-black border-b-2 border-t-2 lg:border-b-4 lg:border-t-4 mt-6 mx-auto max-w-[90%] lg:max-w-full"
       >
         <h1 className="py-2 md:py-4 text-black text-xl sm:3xl lg:text-5xl font-extrabold">
-           GBAC's Member Schools
+          GBAC's Member Schools
         </h1>
       </motion.div>
-      
+
       {images.map((image, index) => (
         <a
           key={index}
@@ -80,7 +80,9 @@ const MemberSchoolsPage = () => {
             }}
             viewport={{ once: false, amount: 0.5 }}
             src={image.src}
-            alt={`${getSchoolNameFromLink(image.link)} logo - GBAC Member School`}
+            alt={`${getSchoolNameFromLink(
+              image.link
+            )} logo - GBAC Member School`}
             className="w-full max-w-full"
           />
         </a>
